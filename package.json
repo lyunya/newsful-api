@@ -11,7 +11,10 @@
     "deploy": "git push heroku master"
   },
   "keywords": [],
-  "author": "",
+  "engines": {
+    "node": "12.16.1"
+  },
+  "author": "Leon Marbukh",
   "license": "ISC",
   "devDependencies": {
     "chai": "^4.2.0",
@@ -20,9 +23,13 @@
     "supertest": "^4.0.2"
   },
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "helmet": "^3.22.0",
-    "morgan": "^1.10.0"
+    "knex": "^0.21.2",
+    "morgan": "^1.10.0",
+    "pg": "^8.3.0",
+    "xss": "^1.0.7"
   }
 }
