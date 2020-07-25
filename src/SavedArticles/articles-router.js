@@ -41,30 +41,30 @@ articlesRouter
       })
       .catch(next);
   });
-  // articlesRouter
-  //   .route("/:id")
-  //   .all((req, res, next) => {
-  //     ArticlesService.getById(req.app.get("db"), req.params.id)
-  //       .then((article) => {
-  //         if (!article) {
-  //           return res.status(404).json({
-  //             error: { message: `article doesn't exist` },
-  //           });
-  //         }
-  //         res.id = article;
-  //         next();
-  //       })
-  //       .catch(next);
-  //   })
-  //   .get((req, res, next) => {
-  //     res.json(res.id);
-  //   })
-  //   .delete((req, res, next) => {
-  //     ArticlesService.deleteArticle(req.app.get("db"), req.params.id)
-  //       .then((affected) => {
-  //         res.status(204).end();
-  //       })
-  //       .catch(next);
-  //   });
+  articlesRouter
+    .route("/:id")
+    .all((req, res, next) => {
+      ArticlesService.getById(req.app.get("db"), req.params.id)
+        .then((article) => {
+          if (!article) {
+            return res.status(404).json({
+              error: { message: `article doesn't exist` },
+            });
+          }
+          res.id = article;
+          next();
+        })
+        .catch(next);
+    })
+    .get((req, res, next) => {
+      res.json(res.id);
+    })
+    .delete((req, res, next) => {
+      ArticlesService.deleteArticle(req.app.get("db"), req.params.id)
+        .then((affected) => {
+          res.status(204).end();
+        })
+        .catch(next);
+    });
 
 module.exports = articlesRouter;
