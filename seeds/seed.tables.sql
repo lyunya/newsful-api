@@ -5,10 +5,10 @@ INSERT INTO
 VALUES
     (
         'leonmarbukh@gmail.com',
-        'p@ssword1'
+        '$2a$12$npeBluOAvKMvba58kRSh9uq0py6NyPm.E4LheuiDKFNVbKtlOTFlS'
     ),
     ('demo@demo.com',
-    'demo');
+    '$2a$12$H6oB9VBswhmHsofqwh3dMOa7g9CLLvQ0y6VtaT9fqav4Dl4YZXG46');
 
 INSERT INTO
     newsful_saved_articles (title, url, image, user_id)

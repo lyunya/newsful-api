@@ -4,10 +4,10 @@ const usersRouter = express.Router();
 const BodyParser = express.json();
 
 usersRouter
-  .route("/") //get all lists
+  .route("/") //get all users
   .get((req, res, next) => {
     const knex = req.app.get("db");
-    ListsServices.getAllUsers(knex)
+    UsersService.getAllUsers(knex)
       .then((users) => {
         res.json(users);
       })
