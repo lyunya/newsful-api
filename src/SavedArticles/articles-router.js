@@ -27,7 +27,7 @@ articlesRouter
       .then((article) => {
         res
           .status(201)
-
+          .location(path.posix.join(req.originalUrl, `/${article.id}`))
           .json(article);
       })
       .catch(next);

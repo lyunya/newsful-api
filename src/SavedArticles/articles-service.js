@@ -20,7 +20,7 @@ const ArticlesService = {
       .first();
   },
   deleteArticle(db, id) {
-    return db("newsful_saved_articless").where({ id }).delete();
+    return db("newsful_saved_articles").where({ id }).delete();
   },
 };
 
