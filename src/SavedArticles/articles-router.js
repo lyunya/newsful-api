@@ -28,13 +28,11 @@ articlesRouter
       .then((article) => {
         res
           .status(201)
-          // .location(path.posix.join(req.originalUrl, `/${article.id}`))
           .json(article);
       })
       .catch(next);
   })
   .delete((req, res, next) => {
-    console.log(req.body);
     ArticlesService.deleteArticle(req.app.get("db"), req.body.id)
       .then((affected) => {
         res.status(204).end();
