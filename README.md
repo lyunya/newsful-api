@@ -1,26 +1,95 @@
-# Express Boilerplate!
+# Newsful Server
 
-This is a boilerplate project used for starting new projects!
+### Newsful was developed to help you see how the news is reported on from all over the political spectrum.
 
-## Set up
+## Server Hosted here:
+https://boiling-springs-79266.herokuapp.com/
 
-Complete the following steps to start a new project (NEW-PROJECT-NAME):
+## API Documentation
 
-1. Clone this repository to your local machine `git clone BOILERPLATE-URL NEW-PROJECTS-NAME`
-2. `cd` into the cloned repository
-3. Make a fresh start of the git history for this project with `rm -rf .git && git init`
-4. Install the node dependencies `npm install`
-5. Move the example Environment file to `.env` that will be ignored by git and read by the express server `mv example.env .env`
-6. Edit the contents of the `package.json` to use NEW-PROJECT-NAME instead of `"name": "express-boilerplate",`
+## Routes
+#### Login endpoint
+'/api/auth/login'  
 
-## Scripts
+##### Method: Post  
+Required:  ```{ email: [string],  
+    password: [string] }```
+ 
+Success Response:  
+Code: 200  
+Sample Data: ```{
+        "authToken": 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF6IjoxNTKYOTQwNjk0LCJzdWIiOiJsZW9ubWFyYnVraEBnbWFpbC5jb19ifQ.XbnLTDqAI1rkPlTr2BTSCILwqsVqET9CFrTgrbAzu4
+        "userId": 1
+    }```  
 
-Start the application `npm start`
+Error Response:  
+Code: 400  
+Content: ```{ error: "Incorrect email or password }```  
+___
+#### Saved Articles endpoint  
+'/api/saved-articles'  
 
-Start nodemon for the application `npm run dev`
+##### Method: Get  
+Returns all saved articles  
+Success Response:  
+Code: 200  
+Sample Data: ```{
+        "title": "This is a headline of a news article",
+        "url": "www.cnn.com/news/headline-article",
+        "image": "www.cnn.com/news/headline-article/images/article-image.png",
+        "user_id": 37,
+    }```  
 
-Run the tests `npm test`
+##### Method: Post  
+Inserts new saved article 
+Required: ```{
+        title: [string],
+        url: [string],
+        image: [string],
+        user_id: [integer]
+        }```
+        
+Success Response:   
+Code: 201  
+Content: article object in JSON  
 
-## Deploying
+Error Response:  
+Code: 400  
+Content: ```{ error: "Missing ${key} in request body" }```  
 
-When your new project is ready for deployment, add a new Heroku application with `heroku create`. This will make a new git remote called "heroku" and you can then `npm run deploy` which will push to this remote's master branch.
+##### Method: Delete
+Deletes saved article
+Success Response:
+Code: 204
+___
+#### Users endpoint  
+'/api/users'  
+
+##### Method: Post  
+Inserts new user  
+Required: ```{ email: [string],
+        password: [string] }```
+
+Success Response:   
+Code: 201  
+Content: user object in JSON ```{ "id": [integer], "email": [string] }```  
+
+Error Response:  
+Code: 400  
+Content: ```{ error: "Missing ${field} in request body" } ```  
+or  
+Code: 400  
+Content: ```{ error: "Email already taken" }```  
+
+
+## Technology Used
+* Node.js
+* Express
+* Mocha
+* Chai
+* Postgres
+* JWT
+* Knex.js
+
+## Security
+Application uses JWT authentication
