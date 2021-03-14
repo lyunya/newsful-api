@@ -58,6 +58,7 @@ articlesRouter
       res.json(res.id);
     })
     .delete((req, res, next) => {
+      console.log(req, "this is the req");
       ArticlesService.deleteArticle(req.app.get("db"), req.params.id)
         .then((affected) => {
           res.status(204).end();
