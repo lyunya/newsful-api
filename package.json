@@ -20,9 +20,9 @@
   "author": "Leon Marbukh",
   "license": "ISC",
   "devDependencies": {
-    "chai": "^4.2.0",
+    "chai": "^4.3.4",
     "mocha": "^7.2.0",
-    "nodemon": "^2.0.4",
+    "nodemon": "^2.0.7",
     "postgrator-cli": "^3.3.0",
     "supertest": "^4.0.2"
   },
@@ -34,10 +34,10 @@
     "express": "^4.17.1",
     "helmet": "^3.23.3",
     "jsonwebtoken": "^8.5.1",
-    "knex": "^0.21.2",
+    "knex": "^0.21.19",
     "morgan": "^1.10.0",
-    "pg": "^8.3.0",
+    "pg": "^8.5.1",
     "winston": "^3.3.3",
-    "xss": "^1.0.7"
+    "xss": "^1.0.8"
   }
 }
