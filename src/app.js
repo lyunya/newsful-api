@@ -20,7 +20,6 @@ app.get('/', (req, res) => {
     res.send('Hello Newsful!')
 });
 
-
 app.use("/api/users", usersRouter);
 app.use("/api/saved-articles", articlesRouter);
 app.use("/api/auth", authRouter);
@@ -28,7 +27,7 @@ app.use("/api/auth", authRouter);
  app.use(function errorHandler(error, req, res, next) {
    let response
    if (NODE_ENV === 'production') {
-     response = { error: { message: 'server error' } }
+     response = { error: { message: 'server error', request: req, response: res } }
    } else {
      console.error(error)
      response = { message: error.message, error }
