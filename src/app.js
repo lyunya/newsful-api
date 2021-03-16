@@ -28,7 +28,7 @@ app.use("/api/auth", authRouter);
    let response
    if (NODE_ENV === 'production') {
      response = { error: { message: 'server error' } }
-     console.log('JENN ERROR:', error)
+     console.error('error:', error)
    } else {
      console.error(error)
      response = { message: error.message, error }
