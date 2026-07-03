@@ -1,19 +1,10 @@
-require("dotenv").config();
+import config from './config.js';
+import { createDb } from './db.js';
+import { makeApp } from './app.js';
 
-const knex = require("knex");
-const app = require("./app");
-const { PORT, DATABASE_URL } = require("./config");
+const db = createDb();
+const app = makeApp(db);
 
-const db = knex({
-  client: 'pg',
-  connection: DATABASE_URL,
-  ssl: {
-    rejectUnauthorized: false,
-  },
-});
-
-app.set("db", db);
-
-app.listen(PORT, () => {
-  console.log(`Server listening at http://localhost:${PORT}`);
+app.listen(config.PORT, () => {
+  console.log(`Newsful API listening on port ${config.PORT}`);
 });

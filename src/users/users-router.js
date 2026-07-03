@@ -1,51 +1,41 @@
-const express = require("express");
-const UsersService = require("./users-service");
-const usersRouter = express.Router();
-const BodyParser = express.json();
+import express from 'express';
+import UsersService from './users-service.js';
+import AuthService from '../auth/auth-service.js';
+import { authRateLimit } from '../middleware/rate-limit.js';
 
-usersRouter
-  .route("/") //get all users
-  .get((req, res, next) => {
-    const knex = req.app.get("db");
-    UsersService.getAllUsers(knex)
-      .then((users) => {
-        res.json(users);
-      })
-      .catch(next);
+const usersRouter = express.Router();
+
+// Register. Responds with an auth token so new users are logged in
+// immediately — no separate login step.
+usersRouter.post('/', authRateLimit, async (req, res) => {
+  const { email, password } = req.body ?? {};
+
+  for (const [field, value] of Object.entries({ email, password })) {
+    if (!value) {
+      return res.status(400).json({ error: `Missing '${field}' in request body` });
+    }
+  }
+
+  const validationError =
+    UsersService.validateEmail(email) || UsersService.validatePassword(password);
+  if (validationError) {
+    return res.status(400).json({ error: validationError });
+  }
+
+  const db = req.app.get('db');
+  if (await UsersService.hasUserWithEmail(db, email)) {
+    return res.status(409).json({ error: 'Email already taken' });
+  }
+
+  const user = await UsersService.insertUser(db, {
+    email,
+    password: await UsersService.hashPassword(password),
   });
 
-usersRouter.post("/", BodyParser, (req, res, next) => {
-  const { email, password } = req.body;
-
-  for (const field of ["email", "password"])
-    if (!req.body[field])
-      return res.status(400).json({
-        error: `Missing '${field}' in request body`,
-      });
-
-  const passwordError = UsersService.validatePassword(password);
-
-  if (passwordError) return res.status(400).json({ error: passwordError });
-
-  UsersService.hasUserWithEmail(req.app.get("db"), email)
-    .then((hasUserWithEmail) => {
-      if (hasUserWithEmail) {
-        return res.status(400).json({ error: `Email already taken` });
-      }
-
-      return UsersService.hashPassword(password).then((hashedPassword) => {
-        const newUser = {
-          email,
-          password: hashedPassword,
-        };
-        return UsersService.insertUser(req.app.get("db"), newUser).then(
-          (user) => {
-            res.status(201).json(UsersService.serializeUser(user));
-          }
-        );
-      });
-    })
-    .catch(next);
+  res.status(201).json({
+    authToken: AuthService.createJwt(user),
+    user,
+  });
 });
 
-module.exports = usersRouter;
+export default usersRouter;

@@ -1,95 +1,78 @@
-# Newsful Server
+# Newsful API
 
-### Newsful was developed to help you see how the news is reported on from all over the political spectrum.
+The API behind [Newsful](https://github.com/lyunya/Newsful-app). Newsful itself works without an account — this service exists for the optional part: accounts and syncing saved articles across devices.
 
-## Server Hosted here:
-https://boiling-springs-79266.herokuapp.com/
+## Stack
 
-## API Documentation
+* Node.js 20+ (ES modules), Express 5
+* Postgres via Knex, plain-SQL migrations run by Postgrator
+* JWT authentication (tokens expire; `7d` by default)
+* Tests with the built-in `node:test` runner + Supertest
 
-## Routes
-#### Login endpoint
-'/api/auth/login'  
+## Getting started
 
-##### Method: Post  
-Required:  ```{ email: [string],  
-    password: [string] }```
- 
-Success Response:  
-Code: 200  
-Sample Data: ```{
-        "authToken": 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF6IjoxNTKYOTQwNjk0LCJzdWIiOiJsZW9ubWFyYnVraEBnbWFpbC5jb19ifQ.XbnLTDqAI1rkPlTr2BTSCILwqsVqET9CFrTgrbAzu4
-        "userId": 1
-    }```  
+```bash
+npm install
+cp .env.example .env    # fill in values
+npm run migrate         # apply SQL migrations
+psql "$DATABASE_URL" -f seeds/seed.tables.sql   # optional demo data
+npm run dev             # start with auto-reload on http://localhost:8000
+```
 
-Error Response:  
-Code: 400  
-Content: ```{ error: "Incorrect email or password }```  
-___
-#### Saved Articles endpoint  
-'/api/saved-articles'  
+Run the tests (needs `TEST_DATABASE_URL` pointing at a migrated test database):
 
-##### Method: Get  
-Returns all saved articles  
-Success Response:  
-Code: 200  
-Sample Data: ```{
-        "title": "This is a headline of a news article",
-        "url": "www.cnn.com/news/headline-article",
-        "image": "www.cnn.com/news/headline-article/images/article-image.png",
-        "user_id": 37,
-    }```  
+```bash
+npm run migrate:test
+npm test
+```
 
-##### Method: Post  
-Inserts new saved article 
-Required: ```{
-        title: [string],
-        url: [string],
-        image: [string],
-        user_id: [integer]
-        }```
-        
-Success Response:   
-Code: 201  
-Content: article object in JSON  
+## Configuration
 
-Error Response:  
-Code: 400  
-Content: ```{ error: "Missing ${key} in request body" }```  
+| Variable | Purpose | Default |
+| --- | --- | --- |
+| `PORT` | Listen port | `8000` |
+| `DATABASE_URL` | Postgres connection string | local `newsful` db |
+| `TEST_DATABASE_URL` | Postgres connection string for tests | local `newsful-test` db |
+| `JWT_SECRET` | Token signing secret — **required in production** | dev-only fallback |
+| `JWT_EXPIRY` | Token lifetime | `7d` |
+| `DATABASE_SSL` | `true`/`false`, TLS to Postgres | `true` in production |
 
-##### Method: Delete
-Deletes saved article
-Success Response:
-Code: 204
-___
-#### Users endpoint  
-'/api/users'  
+## API
 
-##### Method: Post  
-Inserts new user  
-Required: ```{ email: [string],
-        password: [string] }```
+All error responses look like `{ "error": "message" }`.
 
-Success Response:   
-Code: 201  
-Content: user object in JSON ```{ "id": [integer], "email": [string] }```  
+### `POST /api/users` — register
 
-Error Response:  
-Code: 400  
-Content: ```{ error: "Missing ${field} in request body" } ```  
-or  
-Code: 400  
-Content: ```{ error: "Email already taken" }```  
+Body: `{ "email": string, "password": string }`
+Password rules: 8–72 chars, with upper case, lower case, number, and special character.
 
+Responds `201` with the new user **already logged in**:
 
-## Technology Used
-* Node.js
-* Express
-* Mocha
-* Chai
-* Postgres
-* JWT
-* Knex.js
+```json
+{ "authToken": "…", "user": { "id": 1, "email": "you@example.com" } }
+```
 
-## Security
-Application uses JWT authentication
+Errors: `400` invalid email/password, `409` email already taken.
+
+### `POST /api/auth/login`
+
+Body: `{ "email": string, "password": string }`
+
+Responds `200` with `{ "authToken": "…", "user": { "id": 1, "email": "…" } }`.
+Errors: `400` missing fields, `401` wrong credentials.
+
+Login and registration are rate limited (30 attempts / 15 min per IP).
+
+### Saved articles — all require `Authorization: Bearer <token>`
+
+* `GET /api/saved-articles` — the authenticated user's saved articles, newest first
+* `POST /api/saved-articles` — body `{ "title": string, "url": string, "image": string? }`; the owner is taken from the token. Saving the same URL twice is idempotent. Responds `201` with the article.
+* `DELETE /api/saved-articles/:id` — responds `204`; `404` if the article doesn't exist **or belongs to someone else**
+
+## Notable changes in the 2026 rewrite
+
+* **Removed `GET /api/users`** — it returned every user's email and bcrypt hash to anyone
+* **Saved articles are scoped server-side** — the old API returned all users' bookmarks unauthenticated and trusted `user_id` from the request body; now everything derives from the JWT
+* **Deletes check ownership** — previously any (even unauthenticated) request could delete any bookmark by id
+* **JWTs expire** and `JWT_SECRET` must be set in production
+* **Schema hardening (migration 002)** — unique emails (case-insensitive), one bookmark per URL per user, `created_at` timestamps, index on `user_id`

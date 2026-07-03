@@ -1,39 +1,44 @@
-require('dotenv').config();
-const express = require("express");
-const morgan = require("morgan");
-const cors = require("cors");
-const helmet = require("helmet");
-const { NODE_ENV } = require('./config')
-const usersRouter = require("./users/users-router");
-const articlesRouter = require("./SavedArticles/articles-router");
-const authRouter = require("./auth/auth-router");
+import express from 'express';
+import morgan from 'morgan';
+import cors from 'cors';
+import helmet from 'helmet';
+import config from './config.js';
+import usersRouter from './users/users-router.js';
+import authRouter from './auth/auth-router.js';
+import articlesRouter from './saved-articles/articles-router.js';
 
-const app = express();
+// App factory so tests can inject their own database connection.
+export function makeApp(db) {
+  const app = express();
+  app.set('db', db);
 
-const morganOption = (NODE_ENV === 'production') ? 'tiny' : 'common';
+  if (config.NODE_ENV !== 'test') {
+    app.use(morgan(config.isProduction ? 'tiny' : 'dev'));
+  }
+  app.use(helmet());
+  app.use(cors());
+  app.use(express.json());
 
-app.use(morgan(morganOption));
-app.use(helmet());
-app.use(cors());
+  app.get('/', (req, res) => {
+    res.json({ status: 'ok', name: 'newsful-api' });
+  });
 
-app.get('/', (req, res) => {
-    res.send('Hello Newsful!')
-});
+  app.use('/api/users', usersRouter);
+  app.use('/api/auth', authRouter);
+  app.use('/api/saved-articles', articlesRouter);
 
-app.use("/api/users", usersRouter);
-app.use("/api/saved-articles", articlesRouter);
-app.use("/api/auth", authRouter);
+  app.use((req, res) => {
+    res.status(404).json({ error: 'Not found' });
+  });
 
- app.use(function errorHandler(error, req, res, next) {
-   let response
-   if (NODE_ENV === 'production') {
-     response = { error: { message: 'server error' } }
-     console.error('error:', error)
-   } else {
-     console.error(error)
-     response = { message: error.message, error }
-   }
-    res.status(500).json(response)
- })
+  // eslint-disable-next-line no-unused-vars
+  app.use((error, req, res, next) => {
+    console.error(error);
+    const response = config.isProduction
+      ? { error: 'Server error' }
+      : { error: error.message };
+    res.status(500).json(response);
+  });
 
-module.exports = app;   
+  return app;
+}

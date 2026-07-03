@@ -1,38 +1,22 @@
-const AuthService = require("../auth/auth-service");
+import AuthService from '../auth/auth-service.js';
 
-function requireAuth(req, res, next) {
+export async function requireAuth(req, res, next) {
+  const authHeader = req.get('Authorization') || '';
 
-  const authToken = req.get("Authorization") || "";
-
-  let bearerToken;
-  if (!authToken.toLowerCase().startsWith("bearer ")) {
-
-    return res.status(401).json({ error: "Missing bearer token" });
-  } else {
-    bearerToken = authToken.slice(7, authToken.length);
+  if (!authHeader.toLowerCase().startsWith('bearer ')) {
+    return res.status(401).json({ error: 'Missing bearer token' });
   }
+  const token = authHeader.slice('bearer '.length);
 
   try {
-    const payload = AuthService.verifyJwt(bearerToken);
-
-    AuthService.getUserWithEmail(req.app.get("db"), payload.sub)
-      .then((user) => {
-        if (!user) {
-          return res.status(401).json({ error: "Unauthorized request" });
-        }
-
-        req.user = user;
-        next();
-      })
-      .catch((err) => {
-        console.error(err);
-        next(err);
-      });
-  } catch (error) {
-    res.status(401).json({ error: "Unauthorized request" });
+    const payload = AuthService.verifyJwt(token);
+    const user = await AuthService.getUserById(req.app.get('db'), payload.id);
+    if (!user) {
+      return res.status(401).json({ error: 'Unauthorized request' });
+    }
+    req.user = user;
+    next();
+  } catch {
+    return res.status(401).json({ error: 'Unauthorized request' });
   }
 }
-
-module.exports = {
-  requireAuth,
-};
