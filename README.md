@@ -26,6 +26,16 @@ npm run migrate:test
 npm test
 ```
 
+## Deploying (Vercel + Neon)
+
+The repo is set up to run as a single Vercel serverless function (`api/index.js` + `vercel.json`); pending migrations apply themselves on cold start.
+
+1. In [Vercel](https://vercel.com/new), import this repository as a new project (no build settings needed).
+2. In the project's **Storage** tab, create a **Neon** Postgres database (free tier) and connect it — this injects `DATABASE_URL` automatically.
+3. In **Settings → Environment Variables**, add `JWT_SECRET` (e.g. `openssl rand -hex 32`) and redeploy.
+
+It also still runs as a traditional server (`npm start`) on any Node host — migrations run before boot there too.
+
 ## Configuration
 
 | Variable | Purpose | Default |
