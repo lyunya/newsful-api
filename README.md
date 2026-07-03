@@ -41,6 +41,18 @@ npm test
 
 All error responses look like `{ "error": "message" }`.
 
+### `GET /api/news` — no auth required
+
+Aggregated news for the app's three lanes, sourced from free Google News RSS feeds per outlet (no API key involved). Optional `?q=search+terms` for topic search.
+
+Responds `200` with:
+
+```json
+{ "liberal": [ { "title": "…", "url": "…", "source": "MSNBC", "published": "…", "lane": "liberal", "image": null } ], "conservative": [], "neutral": [] }
+```
+
+Results are cached in memory (10 min for top stories, 5 min for searches) and stale results are served if the upstream feeds are unreachable; a cold failure responds `502`.
+
 ### `POST /api/users` — register
 
 Body: `{ "email": string, "password": string }`

@@ -18,7 +18,7 @@ articlesRouter
     res.json(articles);
   })
   .post(async (req, res) => {
-    const { title, url, image } = req.body ?? {};
+    const { title, url, image, source } = req.body ?? {};
 
     for (const [field, value] of Object.entries({ title, url })) {
       if (!value) {
@@ -32,6 +32,7 @@ articlesRouter
       title,
       url,
       image: image || null,
+      source: source || null,
       user_id: req.user.id,
     });
     res.status(201).json(article);

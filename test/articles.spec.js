@@ -48,11 +48,13 @@ test('POST /api/saved-articles takes the owner from the token, not the body', as
     .send({
       title: 'A story',
       url: 'https://www.bbc.com/a-story',
+      source: 'BBC',
       user_id: users[1].id,
     })
     .expect(201);
 
   assert.equal(res.body.user_id, users[0].id);
+  assert.equal(res.body.source, 'BBC');
 });
 
 test('POST /api/saved-articles is idempotent per URL', async () => {
