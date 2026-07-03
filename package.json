@@ -1,43 +1,36 @@
 {
-  "name": "newsful-server",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "newsful-api",
+  "version": "2.0.0",
+  "description": "API for Newsful — accounts and cross-device saved articles",
+  "type": "module",
+  "main": "src/server.js",
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
-    "test": "mocha --require test/setup.js",
     "start": "node src/server.js",
-    "dev": "nodemon src/server.js",
-    "migrate": "postgrator --config postgrator-config.js",
-    "migrate:test": "env NODE_ENV=test npm run migrate",
-    "migrate:production": "env SSL=true DATABASE_URL=$(heroku config:get DATABASE_URL) npm run migrate",
-    "predeploy": "npm audit",
-    "deploy": "git push heroku master"
+    "dev": "node --watch src/server.js",
+    "test": "NODE_ENV=test node --test --test-concurrency=1 \"test/*.spec.js\"",
+    "migrate": "node scripts/migrate.js",
+    "migrate:test": "node scripts/migrate.js --test"
   },
   "keywords": [],
-  "engines": {
-    "node": "12.16.1"
-  },
   "author": "Leon Marbukh",
   "license": "ISC",
-  "devDependencies": {
-    "chai": "^4.3.4",
-    "mocha": "^7.2.0",
-    "nodemon": "^2.0.7",
-    "postgrator-cli": "^3.3.0",
-    "supertest": "^4.0.2"
-  },
   "dependencies": {
-    "bcryptjs": "^2.4.3",
-    "body-parser": "^1.19.0",
+    "bcryptjs": "^3.0.2",
     "cors": "^2.8.5",
-    "dotenv": "^8.2.0",
-    "express": "^4.17.1",
-    "helmet": "^3.23.3",
-    "jsonwebtoken": "^8.5.1",
-    "knex": "^0.21.19",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "express-rate-limit": "^7.5.0",
+    "helmet": "^8.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "knex": "^3.1.0",
     "morgan": "^1.10.0",
-    "pg": "^8.5.1",
-    "winston": "^3.3.3",
-    "xss": "^1.0.8"
+    "pg": "^8.16.0",
+    "postgrator": "^8.0.0"
+  },
+  "devDependencies": {
+    "supertest": "^7.1.1"
   }
 }

@@ -1,43 +1,34 @@
-const express = require("express");
-const AuthService = require("./auth-service");
-const { requireAuth } = require("../middleware/jwt-auth");
+import express from 'express';
+import AuthService from './auth-service.js';
+import { authRateLimit } from '../middleware/rate-limit.js';
+
 const authRouter = express.Router();
-const bodyParser = express.json();
 
-authRouter.post("/login", bodyParser, (req, res, next) => {
-  const { email, password } = req.body;
-  const loginUser = { email, password };
+authRouter.post('/login', authRateLimit, async (req, res) => {
+  const { email, password } = req.body ?? {};
 
-  for (const [key, value] of Object.entries(loginUser))
-    if (value == null)
-      return res.status(400).json({
-        error: `Missing '${key}' in request body`,
-      });
+  for (const [field, value] of Object.entries({ email, password })) {
+    if (!value) {
+      return res.status(400).json({ error: `Missing '${field}' in request body` });
+    }
+  }
 
-  AuthService.getUserWithEmail(req.app.get("db"), loginUser.email)
-    .then((dbUser) => {
-      if (!dbUser)
-        return res.status(400).json({
-          error: "Incorrect email or password",
-        });
+  const db = req.app.get('db');
+  const user = await AuthService.getUserWithEmail(db, email);
+  const passwordMatches = user
+    ? await AuthService.comparePasswords(password, user.password)
+    : false;
 
-      return AuthService.comparePasswords(loginUser.password, dbUser.password).then(
-        (compareMatch) => {
-          if (!compareMatch)
-            return res.status(400).json({
-              error: "Incorrect email or password",
-            });
+  if (!user || !passwordMatches) {
+    return res.status(401).json({ error: 'Incorrect email or password' });
+  }
 
-          const sub = dbUser.email;
-          const payload = { id: dbUser.id };
-          res.send({
-            authToken: AuthService.createJwt(sub, payload),
-            userId: dbUser.id,
-          });
-        }
-      );
-    })
-    .catch(next);
-})
+  res.json({
+    authToken: AuthService.createJwt(user),
+    user: { id: user.id, email: user.email },
+    // Legacy field kept for older clients
+    userId: user.id,
+  });
+});
 
-module.exports = authRouter;
+export default authRouter;
