@@ -14,6 +14,7 @@ import newsRouter from './news/news-router.js';
 export function makeApp(db) {
   const app = express();
   app.set('db', db);
+  app.set('trust proxy', 1);
 
   if (config.NODE_ENV !== 'test') {
     app.use(morgan(config.isProduction ? 'tiny' : 'dev'));
