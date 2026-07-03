@@ -3,6 +3,8 @@ import morgan from 'morgan';
 import cors from 'cors';
 import helmet from 'helmet';
 import config from './config.js';
+import { createDb } from './db.js';
+import { runMigrations } from './migrate.js';
 import usersRouter from './users/users-router.js';
 import authRouter from './auth/auth-router.js';
 import articlesRouter from './saved-articles/articles-router.js';
@@ -43,4 +45,19 @@ export function makeApp(db) {
   });
 
   return app;
+}
+
+let serverlessApp;
+let ready;
+
+export default async function handler(req, res) {
+  serverlessApp ??= makeApp(createDb());
+
+  ready ??= runMigrations().catch((error) => {
+    ready = undefined; // let the next request retry
+    throw error;
+  });
+  await ready;
+
+  return serverlessApp(req, res);
 }
