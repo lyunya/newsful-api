@@ -1,5 +1,5 @@
 const TABLE = 'newsful_saved_articles';
-const COLUMNS = ['id', 'title', 'url', 'image', 'user_id', 'created_at'];
+const COLUMNS = ['id', 'title', 'url', 'image', 'source', 'user_id', 'created_at'];
 
 const ArticlesService = {
   getUserArticles(db, userId) {

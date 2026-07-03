@@ -6,6 +6,7 @@ import config from './config.js';
 import usersRouter from './users/users-router.js';
 import authRouter from './auth/auth-router.js';
 import articlesRouter from './saved-articles/articles-router.js';
+import newsRouter from './news/news-router.js';
 
 // App factory so tests can inject their own database connection.
 export function makeApp(db) {
@@ -26,6 +27,7 @@ export function makeApp(db) {
   app.use('/api/users', usersRouter);
   app.use('/api/auth', authRouter);
   app.use('/api/saved-articles', articlesRouter);
+  app.use('/api/news', newsRouter);
 
   app.use((req, res) => {
     res.status(404).json({ error: 'Not found' });
