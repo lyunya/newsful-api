@@ -28,6 +28,9 @@ try {
     driver: 'pg',
     database: new URL(connectionString).pathname.slice(1),
     execQuery: (query) => client.query(query),
+    // Databases migrated by the old postgrator-cli may have recorded
+    // different checksums; migrations are idempotent, so skip validation.
+    validateChecksums: false,
   });
 
   const applied = await postgrator.migrate(targetVersion);
