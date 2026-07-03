@@ -8,5 +8,7 @@ export function createDb(connectionString = config.DATABASE_URL) {
       connectionString,
       ssl: config.DATABASE_SSL ? { rejectUnauthorized: false } : false,
     },
+    // min 0 lets idle serverless instances release their connections
+    pool: { min: 0, max: 5 },
   });
 }
