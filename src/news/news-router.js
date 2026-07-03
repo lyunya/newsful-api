@@ -1,18 +1,22 @@
-import express from 'express';
-import { getNews } from './news-service.js';
+import express from "express";
+import { getNews } from "./news-service.js";
 
 const newsRouter = express.Router();
 
-newsRouter.get('/', async (req, res) => {
-  const query = String(req.query.q ?? '')
+newsRouter.get("/", async (req, res) => {
+  const query = String(req.query.q ?? "")
     .trim()
     .slice(0, 100);
 
   try {
-    res.json(await getNews(query));
+    res.json(
+      await getNews(query, {
+        fetchImpl: req.app.get("newsFetchImpl") || fetch,
+      }),
+    );
   } catch (error) {
-    console.error('News feeds unavailable:', error.message);
-    res.status(502).json({ error: 'News feeds are unavailable right now' });
+    console.error("News feeds unavailable:", error.message);
+    res.status(502).json({ error: "News feeds are unavailable right now" });
   }
 });
 
