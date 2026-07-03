@@ -36,6 +36,25 @@ function feedXml(domain, sourceName, count = 2) {
     </rss>`;
 }
 
+function feedXmlWithoutImages(domain, sourceName, count = 2) {
+  const items = Array.from(
+    { length: count },
+    (_, i) => `
+    <item>
+      <title>Story ${i + 1} from ${domain} - ${sourceName}</title>
+      <link>https://news.google.com/rss/articles/${domain}-${i}?oc=5</link>
+      <guid isPermaLink="false">guid-${domain}-${i}</guid>
+      <pubDate>Thu, 0${(i % 3) + 1} Jul 2026 0${i}:12:11 GMT</pubDate>
+      <description>&lt;a href="https://news.google.com/rss/articles/${domain}-${i}"&gt;Story&lt;/a&gt;</description>
+      <source url="https://www.${domain}">${sourceName}</source>
+    </item>`,
+  ).join("");
+  return `<?xml version="1.0" encoding="UTF-8"?>
+    <rss version="2.0">
+      <channel><title>"site:${domain}" - Google News</title>${items}</channel>
+    </rss>`;
+}
+
 const SOURCE_NAMES = {
   "msnbc.com": "MSNBC",
   "huffpost.com": "HuffPost",
@@ -136,6 +155,40 @@ test("getNews returns all three lanes, newest first", async () => {
     "sorted by recency",
   );
   assert.ok(news.conservative.every((a) => a.lane === "conservative"));
+});
+
+test("getNews enriches search results that only have Google News article links", async () => {
+  const searchFetch = (url) => {
+    if (url.includes("news.google.com/rss/articles/")) {
+      return Promise.resolve({
+        ok: true,
+        url,
+        headers: new Map([["content-type", "text/html"]]),
+        text: () =>
+          Promise.resolve(`
+            <html>
+              <head>
+                <meta property="og:image" content="https://lh3.googleusercontent.com/story-thumb=s0-w300">
+              </head>
+            </html>
+          `),
+      });
+    }
+
+    const q = new URL(url).searchParams.get("q");
+    const domain = q.match(/site:(\S+)/)[1];
+    return Promise.resolve({
+      ok: true,
+      text: () =>
+        Promise.resolve(feedXmlWithoutImages(domain, SOURCE_NAMES[domain])),
+    });
+  };
+
+  const news = await getNews("climate", { fetchImpl: searchFetch });
+  assert.equal(
+    news.neutral[0].image,
+    "https://lh3.googleusercontent.com/story-thumb=s0-w300",
+  );
 });
 
 test("getNews caches results", async () => {

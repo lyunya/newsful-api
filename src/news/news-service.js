@@ -92,7 +92,8 @@ export function extractPageImage(html, pageUrl) {
     if (!content) continue;
 
     try {
-      return new URL(decodeHtmlAttribute(content), pageUrl).href;
+      const imageUrl = new URL(decodeHtmlAttribute(content), pageUrl).href;
+      if (isUsefulImageUrl(imageUrl)) return imageUrl;
     } catch {
       return null;
     }
@@ -105,19 +106,31 @@ function firstValue(...values) {
   return values.find((value) => typeof value === "string" && value);
 }
 
+function isUsefulImageUrl(url) {
+  return (
+    url &&
+    !url.includes("tracking/npr-rss-pixel") &&
+    !url.includes("/gnews/logo/") &&
+    !/\/-DR60l-K8vnyi99NZovm9HlXyZwQ85GMDxiwJWzoasZYCUrPuUM_P_4Rb7ei03j-0nRs0c4F=/.test(
+      url,
+    )
+  );
+}
+
 function imageUrlFromMedia(value) {
   const media = Array.isArray(value) ? value[0] : value;
   if (!media || typeof media !== "object") return null;
-  return firstValue(media["@_url"], media.url);
+  const url = firstValue(media["@_url"], media.url);
+  return isUsefulImageUrl(url) ? url : null;
 }
 
 function imageUrlFromHtml(value) {
   if (typeof value !== "string") return null;
   const src = value.match(/<img\b[^>]*\bsrc=["']([^"']+)["']/i)?.[1];
-  if (!src || src === "undefined" || src.includes("tracking/npr-rss-pixel")) {
-    return null;
-  }
-  return decodeHtmlAttribute(src);
+  if (!src || src === "undefined") return null;
+
+  const url = decodeHtmlAttribute(src);
+  return isUsefulImageUrl(url) ? url : null;
 }
 
 function itemImage(item) {
@@ -132,8 +145,6 @@ function itemImage(item) {
 
 async function fetchArticleImage(article, fetchImpl) {
   try {
-    if (new URL(article.url).hostname === "news.google.com") return null;
-
     const response = await fetchImpl(article.url, {
       headers: { "user-agent": "newsful/2 (+https://newsful.vercel.app)" },
       signal: AbortSignal.timeout(IMAGE_TIMEOUT_MS),
@@ -152,7 +163,11 @@ async function fetchArticleImage(article, fetchImpl) {
 async function enrichArticleImages(articles, fetchImpl) {
   const visibleArticles = articles.slice(0, IMAGE_ARTICLES_PER_LANE);
   const images = await Promise.all(
-    visibleArticles.map((article) => fetchArticleImage(article, fetchImpl)),
+    visibleArticles.map((article) =>
+      article.image
+        ? Promise.resolve(null)
+        : fetchArticleImage(article, fetchImpl),
+    ),
   );
 
   return articles.map((article, index) => ({
