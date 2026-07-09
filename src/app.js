@@ -2,7 +2,7 @@ import express from 'express';
 import morgan from 'morgan';
 import cors from 'cors';
 import helmet from 'helmet';
-import config from './config.js';
+import config, { missingProductionConfig } from './config.js';
 import { createDb } from './db.js';
 import { runMigrations } from './migrate.js';
 import usersRouter from './users/users-router.js';
@@ -88,7 +88,21 @@ async function ensureSchema(db) {
   `);
 }
 
+function respondStartupFailure(res, message) {
+  res.statusCode = 500;
+  res.setHeader('content-type', 'application/json');
+  res.end(JSON.stringify({ error: `Startup failed: ${message}` }));
+}
+
 export default async function handler(req, res) {
+  // Answer with the actual problem instead of the platform's opaque
+  // FUNCTION_INVOCATION_FAILED page.
+  const problems = missingProductionConfig();
+  if (problems.length > 0) {
+    console.error('Startup failed:', problems.join('; '));
+    return respondStartupFailure(res, problems.join('; '));
+  }
+
   const db = serverlessApp?.get('db') ?? createDb();
   serverlessApp ??= makeApp(db);
 
@@ -99,7 +113,13 @@ export default async function handler(req, res) {
     ready = undefined; // let the next request retry
     throw error;
   });
-  await ready;
+
+  try {
+    await ready;
+  } catch (error) {
+    console.error('Startup failed:', error);
+    return respondStartupFailure(res, `database setup failed — ${error.message}`);
+  }
 
   return serverlessApp(req, res);
 }
