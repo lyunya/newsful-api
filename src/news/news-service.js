@@ -45,6 +45,10 @@ const IMAGE_TIMEOUT_MS = 2_500;
 const IMAGE_ARTICLES_PER_LANE = 12;
 
 const parser = new XMLParser({ ignoreAttributes: false });
+
+export const FEED_HEADERS = {
+  "user-agent": "newsful/2 (+https://newsful.vercel.app)",
+};
 const cache = new Map();
 
 export function clearNewsCache() {
@@ -188,13 +192,51 @@ async function enrichArticleImages(articles, fetchImpl) {
   }));
 }
 
-export function parseFeed(xml, laneId) {
+const NAMED_ENTITIES = {
+  amp: "&",
+  quot: '"',
+  apos: "'",
+  lt: "<",
+  gt: ">",
+  nbsp: " ",
+  rsquo: "’",
+  lsquo: "‘",
+  rdquo: "”",
+  ldquo: "“",
+  ndash: "–",
+  mdash: "—",
+  hellip: "…",
+};
+
+// Some feeds double-encode, leaving "&#039;" or "&amp;" in headlines after
+// the XML parser has done its pass.
+export function decodeEntities(value) {
+  return String(value).replace(
+    /&(?:#(\d+)|#x([0-9a-f]+)|([a-z]+));/gi,
+    (match, decimal, hex, name) => {
+      if (decimal) return String.fromCodePoint(Number(decimal));
+      if (hex) return String.fromCodePoint(parseInt(hex, 16));
+      return NAMED_ENTITIES[name.toLowerCase()] ?? match;
+    },
+  );
+}
+
+function plainText(html, maxLength) {
+  if (typeof html !== "string") return "";
+  return decodeEntities(html.replace(/<[^>]*>/g, " "))
+    .replace(/\s+/g, " ")
+    .trim()
+    .slice(0, maxLength);
+}
+
+export function parseFeed(xml, laneId, { includeSummary = false } = {}) {
   const items = toArray(parser.parse(xml)?.rss?.channel?.item);
   return items
     .map((item) => {
-      const source =
+      const rawSource =
         typeof item.source === "object" ? item.source["#text"] : item.source;
-      let title = String(item.title ?? "");
+      const source = rawSource ? decodeEntities(rawSource) : rawSource;
+      let title = decodeEntities(String(item.title ?? "")).trim();
       // Google News appends " - Source Name" to every headline
       if (source && title.endsWith(` - ${source}`)) {
         title = title.slice(0, -(source.length + 3));
@@ -210,6 +252,9 @@ export function parseFeed(xml, laneId) {
             ? published.toISOString()
             : null,
         lane: laneId,
+        ...(includeSummary
+          ? { summary: plainText(item.description, 300) }
+          : {}),
       };
     })
     .filter((article) => article.title && article.url);

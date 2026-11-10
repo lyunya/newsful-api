@@ -1,0 +1,2046 @@
+[
+ {
+  "title": "Jim Jordan, a hard-charging Trump ally, wins race to become House Republican leader",
+  "url": "https://example.com/a/0",
+  "source": "MS NOW",
+  "lane": "liberal",
+  "published": "2026-11-10T19:37:49.000Z"
+ },
+ {
+  "title": "Mika Brzezinski rips Pete Hegseth’s ‘desperate attempt to save his job’",
+  "url": "https://example.com/a/1",
+  "source": "MS NOW",
+  "lane": "liberal",
+  "published": "2026-11-10T17:49:05.000Z"
+ },
+ {
+  "title": "Mika slams Hegseth’s ’embarrassing’ speech: “Desperate attempt to save his job”",
+  "url": "https://example.com/a/10",
+  "source": "MS NOW",
+  "lane": "liberal",
+  "published": "2026-11-10T13:54:30.000Z"
+ },
+ {
+  "title": "Inflation runs hotter than expected as higher prices extend beyond the gas station",
+  "url": "https://example.com/a/100",
+  "source": "AP",
+  "lane": "neutral",
+  "published": "2026-11-10T15:55:00.000Z"
+ },
+ {
+  "title": "US Army member arrested in UK for suspected 'espionage' for Russia",
+  "url": "https://example.com/a/101",
+  "source": "Reuters",
+  "lane": "neutral",
+  "published": "2026-11-10T20:04:39.000Z"
+ },
+ {
+  "title": "Nvidia selloff deepens, adding to AI jitters",
+  "url": "https://example.com/a/102",
+  "source": "Reuters",
+  "lane": "neutral",
+  "published": "2026-11-10T20:46:17.000Z"
+ },
+ {
+  "title": "Explainer: How would impeaching Pentagon chief Hegseth work?",
+  "url": "https://example.com/a/103",
+  "source": "Reuters",
+  "lane": "neutral",
+  "published": "2026-11-10T18:49:03.000Z"
+ },
+ {
+  "title": "Anthropic brings Claude to Google Meet to tackle tasks live",
+  "url": "https://example.com/a/104",
+  "source": "Reuters",
+  "lane": "neutral",
+  "published": "2026-11-10T17:35:05.000Z"
+ },
+ {
+  "title": "Microsoft tops Nvidia's market cap for first time since June 2025",
+  "url": "https://example.com/a/105",
+  "source": "Reuters",
+  "lane": "neutral",
+  "published": "2026-11-10T17:11:10.000Z"
+ },
+ {
+  "title": "TSMC to invest up to $1 billion in Anthropic, OpenAI",
+  "url": "https://example.com/a/106",
+  "source": "Reuters",
+  "lane": "neutral",
+  "published": "2026-11-10T14:16:09.000Z"
+ },
+ {
+  "title": "What are the impeachment articles facing Pete Hegseth?",
+  "url": "https://example.com/a/107",
+  "source": "Reuters",
+  "lane": "neutral",
+  "published": "2026-11-10T15:01:28.000Z"
+ },
+ {
+  "title": "Defiant Hegseth blasts impeachment 'farce' ahead of US House vote",
+  "url": "https://example.com/a/108",
+  "source": "Reuters",
+  "lane": "neutral",
+  "published": "2026-11-10T21:53:45.000Z"
+ },
+ {
+  "title": "Fed to raise rates once more in December as inflation risks stay high: Reuters poll",
+  "url": "https://example.com/a/109",
+  "source": "Reuters",
+  "lane": "neutral",
+  "published": "2026-11-10T14:35:08.000Z"
+ },
+ {
+  "title": "GOP Rep. Massie introduces articles of impeachment against Hegseth",
+  "url": "https://example.com/a/11",
+  "source": "MS NOW",
+  "lane": "liberal",
+  "published": "2026-11-09T19:09:32.000Z"
+ },
+ {
+  "title": "Nvidia heads for $470 billion two-day wipeout as CEO affair fallout deepens",
+  "url": "https://example.com/a/110",
+  "source": "Reuters",
+  "lane": "neutral",
+  "published": "2026-11-10T20:49:47.000Z"
+ },
+ {
+  "title": "EXCLUSIVE: Anthropic eyes $1.4 trillion IPO valuation in test of Wall Street's AI fervor",
+  "url": "https://example.com/a/111",
+  "source": "Reuters",
+  "lane": "neutral",
+  "published": "2026-11-10T19:55:19.000Z"
+ },
+ {
+  "title": "US House Republicans choose Jim Jordan as their next party leader",
+  "url": "https://example.com/a/112",
+  "source": "Reuters",
+  "lane": "neutral",
+  "published": "2026-11-10T20:18:28.000Z"
+ },
+ {
+  "title": "Wall St ends lower as hot inflation data, Fed comments heighten rate worries",
+  "url": "https://example.com/a/113",
+  "source": "Reuters",
+  "lane": "neutral",
+  "published": "2026-11-10T21:27:01.000Z"
+ },
+ {
+  "title": "France summons Iran envoy over supermarket fridge hack, warns of response",
+  "url": "https://example.com/a/114",
+  "source": "Reuters",
+  "lane": "neutral",
+  "published": "2026-11-10T13:26:53.000Z"
+ },
+ {
+  "title": "Nvidia's clubby board faces a sticky 'honey pot' test",
+  "url": "https://example.com/a/115",
+  "source": "Reuters",
+  "lane": "neutral",
+  "published": "2026-11-10T20:40:01.000Z"
+ },
+ {
+  "title": "Fed officials open door to a half-percentage-point rate hike as inflation worsens",
+  "url": "https://example.com/a/116",
+  "source": "Reuters",
+  "lane": "neutral",
+  "published": "2026-11-10T20:42:14.000Z"
+ },
+ {
+  "title": "US Army soldier suspected of spying for Russia arrested in UK",
+  "url": "https://example.com/a/117",
+  "source": "BBC",
+  "lane": "neutral",
+  "published": "2026-11-10T20:20:04.000Z"
+ },
+ {
+  "title": "Nvidia hires major US law firm to investigate alleged Chinese spy affair",
+  "url": "https://example.com/a/118",
+  "source": "BBC",
+  "lane": "neutral",
+  "published": "2026-11-10T22:52:15.000Z"
+ },
+ {
+  "title": "Analysis: Hegseth fights for his political life with appeal to Trump",
+  "url": "https://example.com/a/119",
+  "source": "BBC",
+  "lane": "neutral",
+  "published": "2026-11-10T17:24:01.000Z"
+ },
+ {
+  "title": "Pete Hegseth tries and fails to present a compelling defense ahead of impeachment vote",
+  "url": "https://example.com/a/12",
+  "source": "MS NOW",
+  "lane": "liberal",
+  "published": "2026-11-10T18:02:02.000Z"
+ },
+ {
+  "title": "Claude chatbot maker set for $1.3tn stock market debut despite 'catastrophic' AI warning",
+  "url": "https://example.com/a/120",
+  "source": "BBC",
+  "lane": "neutral",
+  "published": "2026-11-10T17:56:12.000Z"
+ },
+ {
+  "title": "Hegseth: Impeachment effort is 'farce' and 'stunt'",
+  "url": "https://example.com/a/121",
+  "source": "BBC",
+  "lane": "neutral",
+  "published": "2026-11-10T13:28:07.000Z"
+ },
+ {
+  "title": "Trump says FBI investigating Nvidia boss's affair with alleged Chinese spy",
+  "url": "https://example.com/a/122",
+  "source": "BBC",
+  "lane": "neutral",
+  "published": "2026-11-10T08:23:21.000Z"
+ },
+ {
+  "title": "Californians reject wealth tax for billionaires",
+  "url": "https://example.com/a/123",
+  "source": "BBC",
+  "lane": "neutral",
+  "published": "2026-11-10T03:34:46.000Z"
+ },
+ {
+  "title": "Moment Republican Congressman introduces articles of impeachment against Pete Hegseth",
+  "url": "https://example.com/a/124",
+  "source": "BBC",
+  "lane": "neutral",
+  "published": "2026-11-09T20:06:40.000Z"
+ },
+ {
+  "title": "What do we know about Nvidia CEO’s affair with a suspected Chinese spy?",
+  "url": "https://example.com/a/125",
+  "source": "BBC",
+  "lane": "neutral",
+  "published": "2026-11-09T07:10:11.000Z"
+ },
+ {
+  "title": "US inflation higher than expected in October - here's what is happening with prices",
+  "url": "https://example.com/a/126",
+  "source": "BBC",
+  "lane": "neutral",
+  "published": "2026-11-10T14:45:46.000Z"
+ },
+ {
+  "title": "What we know so far about Jensen Huang's affair with suspected Chinese spy",
+  "url": "https://example.com/a/127",
+  "source": "BBC",
+  "lane": "neutral",
+  "published": "2026-11-10T21:22:36.000Z"
+ },
+ {
+  "title": "Gas prices dip below $4 but inflation remains stubbornly high",
+  "url": "https://example.com/a/128",
+  "source": "NPR",
+  "lane": "neutral",
+  "published": "2026-11-10T14:35:50.000Z"
+ },
+ {
+  "title": "House set to vote to impeach Hegseth. And, SCOTUS allows border wall work to proceed",
+  "url": "https://example.com/a/129",
+  "source": "NPR",
+  "lane": "neutral",
+  "published": "2026-11-10T12:01:04.000Z"
+ },
+ {
+  "title": "Push to impeach Hegseth will make Trump ‘double down’ on his support: Lemire",
+  "url": "https://example.com/a/13",
+  "source": "MS NOW",
+  "lane": "liberal",
+  "published": "2026-11-10T17:11:23.000Z"
+ },
+ {
+  "title": "House Republicans elect Jim Jordan as their next leader",
+  "url": "https://example.com/a/130",
+  "source": "NPR",
+  "lane": "neutral",
+  "published": "2026-11-10T21:57:23.000Z"
+ },
+ {
+  "title": "Former Pentagon spokesman on articles of impeachment filed against Hegseth",
+  "url": "https://example.com/a/131",
+  "source": "NPR",
+  "lane": "neutral",
+  "published": "2026-11-10T11:52:24.000Z"
+ },
+ {
+  "title": "Why did California's billionaire tax fail to surf the blue wave?",
+  "url": "https://example.com/a/132",
+  "source": "NPR",
+  "lane": "neutral",
+  "published": "2026-11-10T11:30:00.000Z"
+ },
+ {
+  "title": "House GOP elects Jim Jordan as new leader as the party looks to rebuild from midterms",
+  "url": "https://example.com/a/133",
+  "source": "NPR",
+  "lane": "neutral",
+  "published": "2026-11-10T10:01:00.000Z"
+ },
+ {
+  "title": "California voters defeat billionaire tax proposal that divided Democrats",
+  "url": "https://example.com/a/134",
+  "source": "NPR",
+  "lane": "neutral",
+  "published": "2026-11-10T03:05:39.000Z"
+ },
+ {
+  "title": "Iran denies it was behind cyber fridge attacks targeting France",
+  "url": "https://example.com/a/135",
+  "source": "NPR",
+  "lane": "neutral",
+  "published": "2026-11-09T22:30:49.000Z"
+ },
+ {
+  "title": "Senate Republicans vote to keep Thune as leader after election wipeout",
+  "url": "https://example.com/a/136",
+  "source": "PBS News",
+  "lane": "neutral",
+  "published": "2026-11-10T21:05:55.000Z"
+ },
+ {
+  "title": "House Republicans pick Ohio Rep. Jim Jordan to lead them in the minority",
+  "url": "https://example.com/a/137",
+  "source": "PBS News",
+  "lane": "neutral",
+  "published": "2026-11-10T19:52:21.000Z"
+ },
+ {
+  "title": "U.S. soldier arrested in Britain accused of espionage linked to Russia",
+  "url": "https://example.com/a/138",
+  "source": "PBS News",
+  "lane": "neutral",
+  "published": "2026-11-10T19:41:32.000Z"
+ },
+ {
+  "title": "California voters reject tax on net worth of billionaires",
+  "url": "https://example.com/a/139",
+  "source": "PBS News",
+  "lane": "neutral",
+  "published": "2026-11-10T18:48:07.000Z"
+ },
+ {
+  "title": "France blames Iran for ‘unprecedented’ supermarket fridge cyberattack",
+  "url": "https://example.com/a/14",
+  "source": "CNN",
+  "lane": "liberal",
+  "published": "2026-11-09T16:22:04.000Z"
+ },
+ {
+  "title": "Nvidia and Huang face lawsuit alleging investors were misled about spy affair",
+  "url": "https://example.com/a/140",
+  "source": "PBS News",
+  "lane": "neutral",
+  "published": "2026-11-10T18:32:31.000Z"
+ },
+ {
+  "title": "Inflation runs hotter than expected as higher prices extend beyond the gas station",
+  "url": "https://example.com/a/141",
+  "source": "PBS News",
+  "lane": "neutral",
+  "published": "2026-11-10T17:59:58.000Z"
+ },
+ {
+  "title": "WATCH LIVE: Senate considers bills on permitting, survivor justice as GOP reelects Thune",
+  "url": "https://example.com/a/142",
+  "source": "PBS News",
+  "lane": "neutral",
+  "published": "2026-11-10T16:32:01.000Z"
+ },
+ {
+  "title": "WATCH LIVE: House expected to hold preliminary vote on Hegseth impeachment as GOP chooses Jordan for minority leader",
+  "url": "https://example.com/a/143",
+  "source": "PBS News",
+  "lane": "neutral",
+  "published": "2026-11-10T15:44:12.000Z"
+ },
+ {
+  "title": "WATCH: Hegseth says House impeachment push is about 'policy disagreements' not high crimes",
+  "url": "https://example.com/a/144",
+  "source": "PBS News",
+  "lane": "neutral",
+  "published": "2026-11-10T13:00:25.000Z"
+ },
+ {
+  "title": "Nvidia's Jensen Huang faces scrutiny over alleged affair with Chinese spy",
+  "url": "https://example.com/a/145",
+  "source": "PBS News",
+  "lane": "neutral",
+  "published": "2026-11-09T23:55:35.000Z"
+ },
+ {
+  "title": "What China stands to gain from Nvidia's CEO's alleged affair with spy",
+  "url": "https://example.com/a/146",
+  "source": "PBS News",
+  "lane": "neutral",
+  "published": "2026-11-09T23:50:09.000Z"
+ },
+ {
+  "title": "Nvidia hires former acting US attorney to investigate Jensen Huang",
+  "url": "https://example.com/a/147",
+  "source": "The Hill",
+  "lane": "neutral",
+  "published": "2026-11-10T22:23:53.000Z"
+ },
+ {
+  "title": "Lawmakers react to October inflation data",
+  "url": "https://example.com/a/148",
+  "source": "The Hill",
+  "lane": "neutral",
+  "published": "2026-11-10T22:19:58.000Z"
+ },
+ {
+  "title": "Congress pushes chip export bills amid Nvidia investigation",
+  "url": "https://example.com/a/149",
+  "source": "The Hill",
+  "lane": "neutral",
+  "published": "2026-11-10T22:06:33.000Z"
+ },
+ {
+  "title": "The trap in Trump’s Hegseth defense",
+  "url": "https://example.com/a/15",
+  "source": "CNN",
+  "lane": "liberal",
+  "published": "2026-11-10T05:01:15.000Z"
+ },
+ {
+  "title": "Tillis 'leaning toward' impeaching Hegseth if articles reach Senate",
+  "url": "https://example.com/a/150",
+  "source": "The Hill",
+  "lane": "neutral",
+  "published": "2026-11-10T21:23:30.000Z"
+ },
+ {
+  "title": "Thune elected Senate GOP leader after bruising showdown with critics",
+  "url": "https://example.com/a/151",
+  "source": "The Hill",
+  "lane": "neutral",
+  "published": "2026-11-10T20:58:12.000Z"
+ },
+ {
+  "title": "French wartime resistance heroine Solange Alexandre dies aged 104",
+  "url": "https://example.com/a/152",
+  "source": "BBC",
+  "lane": "neutral",
+  "published": "2026-11-10T13:23:54.000Z"
+ },
+ {
+  "title": "Ex-Trump admin official Calley Means wildly suggests Susie Wiles — a 69-year-old cancer survivor — ‘has the capacity to inflict physical harm’",
+  "url": "https://example.com/a/153",
+  "source": "New York Post",
+  "lane": "conservative",
+  "published": "2026-11-10T05:36:39.000Z"
+ },
+ {
+  "title": "Democrats accused of 'No Kings' hypocrisy over push to change voter-approved trans sports measures",
+  "url": "https://example.com/a/154",
+  "source": "Fox News",
+  "lane": "conservative",
+  "published": "2026-11-10T20:37:45.000Z"
+ },
+ {
+  "title": "House Dem Congratulates Stephen Miller For 1 Spicy Reason: 'He's Going To Need It'",
+  "url": "https://example.com/a/155",
+  "source": "HuffPost",
+  "lane": "liberal",
+  "published": "2026-11-10T13:49:19.000Z"
+ },
+ {
+  "title": "A socialist group gaining power in Washington is now under scrutiny over Cuba, China funding",
+  "url": "https://example.com/a/156",
+  "source": "Washington Times",
+  "lane": "conservative",
+  "published": "2026-11-10T19:07:20.000Z"
+ },
+ {
+  "title": "US pulls aircraft from second British base over threat from Iran: report",
+  "url": "https://example.com/a/157",
+  "source": "New York Post",
+  "lane": "conservative",
+  "published": "2026-11-10T11:53:02.000Z"
+ },
+ {
+  "title": "Gunman who killed at least 6 in Kraków mass shooting dies in hospital",
+  "url": "https://example.com/a/158",
+  "source": "CNN",
+  "lane": "liberal",
+  "published": "2026-11-09T06:11:15.000Z"
+ },
+ {
+  "title": "In another shake-up at DC Studios, Gunn and Safran are out as Skydance appoints Marvel vet Latcham",
+  "url": "https://example.com/a/159",
+  "source": "AP",
+  "lane": "neutral",
+  "published": "2026-11-09T20:23:00.000Z"
+ },
+ {
+  "title": "Anthropic to seek $1.4 trillion valuation in blockbuster IPO",
+  "url": "https://example.com/a/16",
+  "source": "CNN",
+  "lane": "liberal",
+  "published": "2026-11-10T11:00:15.000Z"
+ },
+ {
+  "title": "Reporter Hits Trump With Devastatingly Simple Question: ‘How Does It Feel Being A Loser?’",
+  "url": "https://example.com/a/160",
+  "source": "HuffPost",
+  "lane": "liberal",
+  "published": "2026-11-10T09:55:22.000Z"
+ },
+ {
+  "title": "US confident Russian diesel cargo off US coast will sell in global market",
+  "url": "https://example.com/a/161",
+  "source": "Reuters",
+  "lane": "neutral",
+  "published": "2026-11-10T20:47:39.000Z"
+ },
+ {
+  "title": "The Monaco summit that will decide the future of Carrick and Man Utd",
+  "url": "https://example.com/a/162",
+  "source": "BBC",
+  "lane": "neutral",
+  "published": "2026-11-10T18:12:02.000Z"
+ },
+ {
+  "title": "At UN climate talks, 5 nations back plan to double rooftop solar panels by 2030",
+  "url": "https://example.com/a/163",
+  "source": "PBS News",
+  "lane": "neutral",
+  "published": "2026-11-10T18:57:48.000Z"
+ },
+ {
+  "title": "John Kerry says China now leads on green energy: 'The rest of the world is stumbling along'",
+  "url": "https://example.com/a/164",
+  "source": "The Hill",
+  "lane": "neutral",
+  "published": "2026-11-10T21:14:26.000Z"
+ },
+ {
+  "title": "Newly elected Democrats arrive in Washington – in pictures",
+  "url": "https://example.com/a/165",
+  "source": "The Guardian",
+  "lane": "liberal",
+  "published": "2026-11-10T20:23:31.000Z"
+ },
+ {
+  "title": "GOP wipeout goes from bad to worse as Dems quietly score another major win with big ramifications",
+  "url": "https://example.com/a/166",
+  "source": "Fox News",
+  "lane": "conservative",
+  "published": "2026-11-10T14:45:47.000Z"
+ },
+ {
+  "title": "The average cost for a new vehicle in the U.S. hits a record high: over $51,000",
+  "url": "https://example.com/a/167",
+  "source": "NPR",
+  "lane": "neutral",
+  "published": "2026-11-10T13:30:00.000Z"
+ },
+ {
+  "title": "Trump’s 8-Word Reply To JD Vance’s Iran War Diss Called A ‘Striking Rebuke’",
+  "url": "https://example.com/a/168",
+  "source": "HuffPost",
+  "lane": "liberal",
+  "published": "2026-11-09T21:04:14.000Z"
+ },
+ {
+  "title": "Congress Must Act Now to Keep America’s Chemical Safety Program on Solid Ground",
+  "url": "https://example.com/a/169",
+  "source": "Breitbart",
+  "lane": "conservative",
+  "published": "2026-11-10T12:50:52.000Z"
+ },
+ {
+  "title": "What we know about Alice Huang, the alleged spy at the center of the Nvidia scandal",
+  "url": "https://example.com/a/17",
+  "source": "CNN",
+  "lane": "liberal",
+  "published": "2026-11-10T08:29:45.000Z"
+ },
+ {
+  "title": "Katie Miller Makes Major Announcement After Stephen Miller Promotion",
+  "url": "https://example.com/a/170",
+  "source": "HuffPost",
+  "lane": "liberal",
+  "published": "2026-11-09T13:52:00.000Z"
+ },
+ {
+  "title": "Rachel Maddow – 11/9/26",
+  "url": "https://example.com/a/171",
+  "source": "MS NOW",
+  "lane": "liberal",
+  "published": "2026-11-10T05:55:44.000Z"
+ },
+ {
+  "title": "81-year-old sci-fi author M. John Harrison wins the 2026 Booker Prize",
+  "url": "https://example.com/a/172",
+  "source": "CNN",
+  "lane": "liberal",
+  "published": "2026-11-09T22:07:16.000Z"
+ },
+ {
+  "title": "House panel calls on Justice Department to reopen Epstein investigation",
+  "url": "https://example.com/a/173",
+  "source": "Washington Times",
+  "lane": "conservative",
+  "published": "2026-11-10T15:14:59.000Z"
+ },
+ {
+  "title": "Trump sparks faith-based backlash after expressing hatred for his perceived enemies",
+  "url": "https://example.com/a/174",
+  "source": "MS NOW",
+  "lane": "liberal",
+  "published": "2026-11-10T14:26:51.000Z"
+ },
+ {
+  "title": "Pressed on his expanding wealth and alleged corruption, Trump says all the wrong things",
+  "url": "https://example.com/a/175",
+  "source": "MS NOW",
+  "lane": "liberal",
+  "published": "2026-11-08T23:54:40.000Z"
+ },
+ {
+  "title": "‘Lighting the Constitution on fire’: Top Trump lackey makes shocking move on Trump’s behalf",
+  "url": "https://example.com/a/176",
+  "source": "MS NOW",
+  "lane": "liberal",
+  "published": "2026-11-09T21:25:33.000Z"
+ },
+ {
+  "title": "Train attack driver's '10 seconds' to change line",
+  "url": "https://example.com/a/177",
+  "source": "BBC",
+  "lane": "neutral",
+  "published": "2026-11-10T18:54:35.000Z"
+ },
+ {
+  "title": "Exclusive -- Trump World Puts Rupert Murdoch on Notice After His Empire’s Globalist Attacks on JD Vance",
+  "url": "https://example.com/a/178",
+  "source": "Breitbart",
+  "lane": "conservative",
+  "published": "2026-11-10T13:26:05.000Z"
+ },
+ {
+  "title": "Exclusive -- Sen. Rick Scott Walks Through How the Government Has Screwed Younger Generations",
+  "url": "https://example.com/a/179",
+  "source": "Breitbart",
+  "lane": "conservative",
+  "published": "2026-11-10T17:24:54.000Z"
+ },
+ {
+  "title": "Nvidia stock falls after investigation into CEO, bucking market rally",
+  "url": "https://example.com/a/18",
+  "source": "CNN",
+  "lane": "liberal",
+  "published": "2026-11-09T14:37:49.000Z"
+ },
+ {
+  "title": "California police investigate after 27 fall ill at half-marathon running event",
+  "url": "https://example.com/a/180",
+  "source": "BBC",
+  "lane": "neutral",
+  "published": "2026-11-10T13:22:12.000Z"
+ },
+ {
+  "title": "House GOP report critical of Epstein investigation",
+  "url": "https://example.com/a/181",
+  "source": "NPR",
+  "lane": "neutral",
+  "published": "2026-11-10T21:43:31.000Z"
+ },
+ {
+  "title": "FDA adds rare vision-loss warning to popular GLP-1 drugs",
+  "url": "https://example.com/a/182",
+  "source": "AP",
+  "lane": "neutral",
+  "published": "2026-11-10T16:32:00.000Z"
+ },
+ {
+  "title": "Trump and Blanche give away the game, show signs of panic about congressional oversight",
+  "url": "https://example.com/a/183",
+  "source": "MS NOW",
+  "lane": "liberal",
+  "published": "2026-11-09T13:13:55.000Z"
+ },
+ {
+  "title": "Democrats call for Trump to bar White House staff from using prediction markets",
+  "url": "https://example.com/a/184",
+  "source": "MS NOW",
+  "lane": "liberal",
+  "published": "2026-11-10T10:00:00.000Z"
+ },
+ {
+  "title": "Press Forward completes nearly $600M in journalism investments about 2 years early",
+  "url": "https://example.com/a/185",
+  "source": "AP",
+  "lane": "neutral",
+  "published": "2026-11-10T16:03:56.000Z"
+ },
+ {
+  "title": "COMMENTARY: Morning Bid: War is over?",
+  "url": "https://example.com/a/186",
+  "source": "Reuters",
+  "lane": "neutral",
+  "published": "2026-11-10T11:39:05.000Z"
+ },
+ {
+  "title": "Pakistan blames India's Diwali fireworks for Lahore's toxic air",
+  "url": "https://example.com/a/187",
+  "source": "Reuters",
+  "lane": "neutral",
+  "published": "2026-11-10T10:32:35.000Z"
+ },
+ {
+  "title": "NYC Ferries transforming into floating classrooms for science students in marine life initiative",
+  "url": "https://example.com/a/188",
+  "source": "New York Post",
+  "lane": "conservative",
+  "published": "2026-11-10T20:59:37.000Z"
+ },
+ {
+  "title": "Major Labor Union Joins Calls to Reject Chuck Schumer as Democrats’ Senate Majority Leader",
+  "url": "https://example.com/a/189",
+  "source": "Breitbart",
+  "lane": "conservative",
+  "published": "2026-11-10T16:45:19.000Z"
+ },
+ {
+  "title": "How impeachment of a Cabinet secretary like Hegseth works",
+  "url": "https://example.com/a/19",
+  "source": "CNN",
+  "lane": "liberal",
+  "published": "2026-11-09T20:03:44.000Z"
+ },
+ {
+  "title": "Democrats flip Georgia state House, giving them new control of at least 12 legislative chambers",
+  "url": "https://example.com/a/190",
+  "source": "AP",
+  "lane": "neutral",
+  "published": "2026-11-09T22:22:00.000Z"
+ },
+ {
+  "title": "Even some Republicans see Stephen Miller’s promotion as a serious mistake",
+  "url": "https://example.com/a/191",
+  "source": "MS NOW",
+  "lane": "liberal",
+  "published": "2026-11-09T14:09:36.000Z"
+ },
+ {
+  "title": "First day of Ukraine peace talks constructive, Zelensky says",
+  "url": "https://example.com/a/192",
+  "source": "BBC",
+  "lane": "neutral",
+  "published": "2026-11-10T21:21:55.000Z"
+ },
+ {
+  "title": "Democrats demand answers on 8-year-old Haitian boy detained by ICE",
+  "url": "https://example.com/a/193",
+  "source": "The Guardian",
+  "lane": "liberal",
+  "published": "2026-11-10T15:51:42.000Z"
+ },
+ {
+  "title": "DeChambeau running out of options - McIlroy",
+  "url": "https://example.com/a/194",
+  "source": "BBC",
+  "lane": "neutral",
+  "published": "2026-11-10T11:23:31.000Z"
+ },
+ {
+  "title": "McTominay reveals heart treatment at World Cup",
+  "url": "https://example.com/a/195",
+  "source": "BBC",
+  "lane": "neutral",
+  "published": "2026-11-10T16:46:31.000Z"
+ },
+ {
+  "title": "Trump says more US attacks on Iran 'highly unlikely'",
+  "url": "https://example.com/a/196",
+  "source": "BBC",
+  "lane": "neutral",
+  "published": "2026-11-10T09:40:31.000Z"
+ },
+ {
+  "title": "JD Vance Makes Lame Joke About 'The Devastating Loss Last Week'",
+  "url": "https://example.com/a/197",
+  "source": "HuffPost",
+  "lane": "liberal",
+  "published": "2026-11-09T18:35:19.000Z"
+ },
+ {
+  "title": "Justice Department sues Lyft for alleged discrimination against disabled passengers",
+  "url": "https://example.com/a/198",
+  "source": "The Hill",
+  "lane": "neutral",
+  "published": "2026-11-10T21:22:02.000Z"
+ },
+ {
+  "title": "Harry Enten Can't Think Of A More 'Tone Deaf' Choice For Trump's Top Staffer — And Has The Stats To Prove It",
+  "url": "https://example.com/a/199",
+  "source": "HuffPost",
+  "lane": "liberal",
+  "published": "2026-11-09T22:03:28.000Z"
+ },
+ {
+  "title": "Hegseth’s impeachment vote puts Republicans in the hot seat after election losses",
+  "url": "https://example.com/a/2",
+  "source": "MS NOW",
+  "lane": "liberal",
+  "published": "2026-11-10T10:03:50.000Z"
+ },
+ {
+  "title": "Nvidia CEO Jensen Huang admits affair as company launches investigation into foreign spy claims",
+  "url": "https://example.com/a/20",
+  "source": "CNN",
+  "lane": "liberal",
+  "published": "2026-11-09T04:27:31.000Z"
+ },
+ {
+  "title": "The Weekend – 11/8/26",
+  "url": "https://example.com/a/200",
+  "source": "MS NOW",
+  "lane": "liberal",
+  "published": "2026-11-08T23:27:01.000Z"
+ },
+ {
+  "title": "Melania Trump's Latest Announcement Has Critics Reaching For The Mute Button",
+  "url": "https://example.com/a/201",
+  "source": "HuffPost",
+  "lane": "liberal",
+  "published": "2026-11-09T12:03:41.000Z"
+ },
+ {
+  "title": "NFL trade deadline 2026: Vikings reunite with Kirk Cousins; Colts stick with Taylor; 49ers get WR Allen – as it happened",
+  "url": "https://example.com/a/202",
+  "source": "The Guardian",
+  "lane": "liberal",
+  "published": "2026-11-10T22:39:16.000Z"
+ },
+ {
+  "title": "Latvia, Lithuania warn of threat in airspace near Belarus",
+  "url": "https://example.com/a/203",
+  "source": "Reuters",
+  "lane": "neutral",
+  "published": "2026-11-10T22:13:12.000Z"
+ },
+ {
+  "title": "Impeachment isn't only for presidents. How does the process work for Cabinet secretaries?",
+  "url": "https://example.com/a/204",
+  "source": "Washington Times",
+  "lane": "conservative",
+  "published": "2026-11-10T17:57:31.000Z"
+ },
+ {
+  "title": "Trump's crypto profits raise alarms for transparency advocates",
+  "url": "https://example.com/a/205",
+  "source": "NPR",
+  "lane": "neutral",
+  "published": "2026-11-10T09:38:28.000Z"
+ },
+ {
+  "title": "'Like gods reigning over humans': Many defectors see daughter of North Korea's Kim as heir apparent",
+  "url": "https://example.com/a/206",
+  "source": "NPR",
+  "lane": "neutral",
+  "published": "2026-11-10T14:16:53.000Z"
+ },
+ {
+  "title": "Pilots describe being inside plane as it is rolled over by blast from jet engines",
+  "url": "https://example.com/a/207",
+  "source": "CNN",
+  "lane": "liberal",
+  "published": "2026-11-09T22:07:59.000Z"
+ },
+ {
+  "title": "Skydance plans to bundle HBO Max and Paramount+ next year",
+  "url": "https://example.com/a/208",
+  "source": "CNN",
+  "lane": "liberal",
+  "published": "2026-11-09T22:23:25.000Z"
+ },
+ {
+  "title": "College Football Playoff decides to double down and a 24-team playoff is set for next season",
+  "url": "https://example.com/a/209",
+  "source": "AP",
+  "lane": "neutral",
+  "published": "2026-11-10T01:25:00.000Z"
+ },
+ {
+  "title": "US inflation rose more than expected last month",
+  "url": "https://example.com/a/21",
+  "source": "CNN",
+  "lane": "liberal",
+  "published": "2026-11-10T13:36:19.000Z"
+ },
+ {
+  "title": "Look who’s coming to Washington: Meet 10 of the new faces of Congress",
+  "url": "https://example.com/a/210",
+  "source": "MS NOW",
+  "lane": "liberal",
+  "published": "2026-11-09T15:56:47.000Z"
+ },
+ {
+  "title": "F1 ends plans for backup race in Italy as season finale nears in Qatar and Abu Dhabi",
+  "url": "https://example.com/a/211",
+  "source": "AP",
+  "lane": "neutral",
+  "published": "2026-11-10T16:26:00.000Z"
+ },
+ {
+  "title": "Whoopi Goldberg lectures Democrats over infighting about leadership, warns 'get your stuff together'",
+  "url": "https://example.com/a/212",
+  "source": "Fox News",
+  "lane": "conservative",
+  "published": "2026-11-10T22:10:38.000Z"
+ },
+ {
+  "title": "Humiliating moment illegal alien who flaunted naked models and flashy cars is grabbed by ICE",
+  "url": "https://example.com/a/213",
+  "source": "New York Post",
+  "lane": "conservative",
+  "published": "2026-11-10T22:22:41.000Z"
+ },
+ {
+  "title": "Lawmakers vow aggressive oversight of FCC chair after Democrats take over",
+  "url": "https://example.com/a/214",
+  "source": "Reuters",
+  "lane": "neutral",
+  "published": "2026-11-10T21:39:04.000Z"
+ },
+ {
+  "title": "IBM to end visa, green card sponsorship for most roles in its Consulting arm",
+  "url": "https://example.com/a/215",
+  "source": "Reuters",
+  "lane": "neutral",
+  "published": "2026-11-10T21:11:45.000Z"
+ },
+ {
+  "title": "Outgoing GOP Rep. Mike Lawler leaves door open for NY governor run after stinging re-election defeat",
+  "url": "https://example.com/a/216",
+  "source": "New York Post",
+  "lane": "conservative",
+  "published": "2026-11-10T22:15:33.000Z"
+ },
+ {
+  "title": "Far-Left Prez Candidate Melenchon Invokes Robespierre While Laying Out Vision for Multicultural 'New France'",
+  "url": "https://example.com/a/217",
+  "source": "Breitbart",
+  "lane": "conservative",
+  "published": "2026-11-10T09:20:02.000Z"
+ },
+ {
+  "title": "Cruise ship pianist rescued by fishermen after nine hours treading water in Pacific Ocean",
+  "url": "https://example.com/a/218",
+  "source": "CNN",
+  "lane": "liberal",
+  "published": "2026-11-09T14:57:16.000Z"
+ },
+ {
+  "title": "DOJ's lawsuit over suspected noncitizen voting in California an attempt to 'disrupt' election: judge",
+  "url": "https://example.com/a/219",
+  "source": "Washington Times",
+  "lane": "conservative",
+  "published": "2026-11-10T20:30:25.000Z"
+ },
+ {
+  "title": "US Army soldier arrested in UK on suspicion of espionage related to Russia",
+  "url": "https://example.com/a/22",
+  "source": "CNN",
+  "lane": "liberal",
+  "published": "2026-11-10T19:20:39.000Z"
+ },
+ {
+  "title": "British celebrity David Walliams accused of sexual misconduct after losing legal battle to block reporting of claims",
+  "url": "https://example.com/a/220",
+  "source": "CNN",
+  "lane": "liberal",
+  "published": "2026-11-10T17:45:38.000Z"
+ },
+ {
+  "title": "Bull and donkey share surprising same-sex interspecies bond",
+  "url": "https://example.com/a/221",
+  "source": "CNN",
+  "lane": "liberal",
+  "published": "2026-11-09T13:00:15.000Z"
+ },
+ {
+  "title": "Former Pentagon Official Dana White Reacts To Trump's Dana White Idea",
+  "url": "https://example.com/a/222",
+  "source": "HuffPost",
+  "lane": "liberal",
+  "published": "2026-11-10T01:22:20.000Z"
+ },
+ {
+  "title": "Team USA hero Connor Hellebuyck says that moments beyond online death threats led to his Winnipeg departure",
+  "url": "https://example.com/a/223",
+  "source": "Fox News",
+  "lane": "conservative",
+  "published": "2026-11-10T22:09:56.000Z"
+ },
+ {
+  "title": "Mike Johnson slams voters for making ‘wrong choice,’ predicts ‘circus’ after GOP’s midterm drubbing",
+  "url": "https://example.com/a/224",
+  "source": "New York Post",
+  "lane": "conservative",
+  "published": "2026-11-10T10:37:44.000Z"
+ },
+ {
+  "title": "Emmanuel and Brigitte Macron file new defamation lawsuit against Candace Owens",
+  "url": "https://example.com/a/225",
+  "source": "The Guardian",
+  "lane": "liberal",
+  "published": "2026-11-10T20:28:47.000Z"
+ },
+ {
+  "title": "Florida AG subpoenas DSA over potential illegal funding from Cuba and China",
+  "url": "https://example.com/a/226",
+  "source": "Fox News",
+  "lane": "conservative",
+  "published": "2026-11-10T21:36:43.000Z"
+ },
+ {
+  "title": "540-Plus Seats Flipped, 6 New Trifectas: Dem Wins At The State Level Keep Piling Up",
+  "url": "https://example.com/a/227",
+  "source": "HuffPost",
+  "lane": "liberal",
+  "published": "2026-11-10T11:00:18.000Z"
+ },
+ {
+  "title": "Violence in northern Nigeria drives tens of thousands into Niger",
+  "url": "https://example.com/a/228",
+  "source": "Reuters",
+  "lane": "neutral",
+  "published": "2026-11-10T11:46:54.000Z"
+ },
+ {
+  "title": "Close call at LAX airport as plane turns in front of another aircraft taking off",
+  "url": "https://example.com/a/229",
+  "source": "CNN",
+  "lane": "liberal",
+  "published": "2026-11-10T02:33:00.000Z"
+ },
+ {
+  "title": "Hegseth impeachment drama is first test of Trump’s eroded post-midterms power",
+  "url": "https://example.com/a/23",
+  "source": "CNN",
+  "lane": "liberal",
+  "published": "2026-11-09T05:00:15.000Z"
+ },
+ {
+  "title": "Falcons trade veteran safety Jessie Bates III to the Jaguars for two draft picks",
+  "url": "https://example.com/a/230",
+  "source": "AP",
+  "lane": "neutral",
+  "published": "2026-11-09T19:35:49.000Z"
+ },
+ {
+  "title": "Outgoing Texas Lieutenant Governor Recommends Reducing His Office's Powers Before Democrats Take Charge",
+  "url": "https://example.com/a/231",
+  "source": "Breitbart",
+  "lane": "conservative",
+  "published": "2026-11-10T20:18:05.000Z"
+ },
+ {
+  "title": "Shanghai-based tycoon Neville Roy Singham's 'Squad,' Bernie Sanders donations resurface",
+  "url": "https://example.com/a/232",
+  "source": "Fox News",
+  "lane": "conservative",
+  "published": "2026-11-10T20:05:56.000Z"
+ },
+ {
+  "title": "Trump-era lawlessness must be prosecuted. Our new group is working to end the impunity | Kenneth Roth",
+  "url": "https://example.com/a/233",
+  "source": "The Guardian",
+  "lane": "liberal",
+  "published": "2026-11-10T13:00:52.000Z"
+ },
+ {
+  "title": "U.S. Military Aircraft Depart Second UK Base After 'Iran Threat'",
+  "url": "https://example.com/a/234",
+  "source": "Breitbart",
+  "lane": "conservative",
+  "published": "2026-11-10T11:11:12.000Z"
+ },
+ {
+  "title": "Exclusive: Trump Administration Carrying Out War on Asylum Fraud After Biden's 'Wide Open Borders'",
+  "url": "https://example.com/a/235",
+  "source": "Breitbart",
+  "lane": "conservative",
+  "published": "2026-11-10T21:13:49.000Z"
+ },
+ {
+  "title": "Takeaways from AP’s report on school closures in the US",
+  "url": "https://example.com/a/236",
+  "source": "AP",
+  "lane": "neutral",
+  "published": "2026-11-09T05:10:00.000Z"
+ },
+ {
+  "title": "Arrests made in Mohamed Al Fayed probe in France, police say",
+  "url": "https://example.com/a/237",
+  "source": "BBC",
+  "lane": "neutral",
+  "published": "2026-11-10T16:19:48.000Z"
+ },
+ {
+  "title": "Dana White declines Trump’s offer to be White House press secretary",
+  "url": "https://example.com/a/238",
+  "source": "BBC",
+  "lane": "neutral",
+  "published": "2026-11-09T22:46:27.000Z"
+ },
+ {
+  "title": "Mississippi Senate race winner still undetermined as ballot deadlines arrive",
+  "url": "https://example.com/a/239",
+  "source": "Washington Times",
+  "lane": "conservative",
+  "published": "2026-11-10T19:28:53.000Z"
+ },
+ {
+  "title": "Nvidia is in peril. Can it survive without Jensen Huang?",
+  "url": "https://example.com/a/24",
+  "source": "CNN",
+  "lane": "liberal",
+  "published": "2026-11-09T15:40:41.000Z"
+ },
+ {
+  "title": "Democrats now control majority of state legislatures. Here's the 6 they flipped",
+  "url": "https://example.com/a/240",
+  "source": "The Hill",
+  "lane": "neutral",
+  "published": "2026-11-10T21:38:59.000Z"
+ },
+ {
+  "title": "Russell Brand sentenced to 10 years and six months in prison for rape and sexual assault",
+  "url": "https://example.com/a/241",
+  "source": "CNN",
+  "lane": "liberal",
+  "published": "2026-11-09T14:27:59.000Z"
+ },
+ {
+  "title": "Fed's Logan calls for two more rate hikes, possibly rapidly",
+  "url": "https://example.com/a/242",
+  "source": "Reuters",
+  "lane": "neutral",
+  "published": "2026-11-10T15:55:43.000Z"
+ },
+ {
+  "title": "Bruce Springsteen Fan Club Shuts Down After His Left-Wing Activism, Abdul El-Sayed Endorsement",
+  "url": "https://example.com/a/243",
+  "source": "Breitbart",
+  "lane": "conservative",
+  "published": "2026-11-10T13:42:54.000Z"
+ },
+ {
+  "title": "Greta Thunberg warns ‘everything we love is at stake’ as she arrives at UN climate talks",
+  "url": "https://example.com/a/244",
+  "source": "AP",
+  "lane": "neutral",
+  "published": "2026-11-10T21:43:00.000Z"
+ },
+ {
+  "title": "Trump Can't Seem To Decide Whether He's Accepted The Midterm Results",
+  "url": "https://example.com/a/245",
+  "source": "HuffPost",
+  "lane": "liberal",
+  "published": "2026-11-09T20:17:00.000Z"
+ },
+ {
+  "title": "Robert De Niro Ferociously Taunts Trump Ally At Film Screening",
+  "url": "https://example.com/a/246",
+  "source": "HuffPost",
+  "lane": "liberal",
+  "published": "2026-11-09T11:44:36.000Z"
+ },
+ {
+  "title": "Opinion | Friends don’t let friends sign up for Medicare Advantage. Here’s why.",
+  "url": "https://example.com/a/247",
+  "source": "MS NOW",
+  "lane": "liberal",
+  "published": "2026-11-10T11:00:00.000Z"
+ },
+ {
+  "title": "Amazon's Ring launches flying camera, autonomous security robot",
+  "url": "https://example.com/a/248",
+  "source": "Reuters",
+  "lane": "neutral",
+  "published": "2026-11-10T14:13:47.000Z"
+ },
+ {
+  "title": "Ilhan Omar huddles with her DC-based lawyers during her first day back on Capitol Hill amid federal probes",
+  "url": "https://example.com/a/249",
+  "source": "Fox News",
+  "lane": "conservative",
+  "published": "2026-11-10T22:25:44.000Z"
+ },
+ {
+  "title": "Despite denial, Trump was briefed on spy concerns related to Nvidia CEO during trip to China, source says",
+  "url": "https://example.com/a/25",
+  "source": "CNN",
+  "lane": "liberal",
+  "published": "2026-11-09T22:23:12.000Z"
+ },
+ {
+  "title": "Rising country singer CJ Beach dead at 22",
+  "url": "https://example.com/a/250",
+  "source": "Fox News",
+  "lane": "conservative",
+  "published": "2026-11-10T21:16:21.000Z"
+ },
+ {
+  "title": "Census should include black English and Asian English options, says MP",
+  "url": "https://example.com/a/251",
+  "source": "BBC",
+  "lane": "neutral",
+  "published": "2026-11-10T22:04:54.000Z"
+ },
+ {
+  "title": "Cancer-stricken Biden emerges in Ireland to watch son Hunter get gold medal for an insane reason",
+  "url": "https://example.com/a/252",
+  "source": "New York Post",
+  "lane": "conservative",
+  "published": "2026-11-10T21:34:18.000Z"
+ },
+ {
+  "title": "Genocide suspect deported by U.S. will stand trial in Rwanda",
+  "url": "https://example.com/a/253",
+  "source": "PBS News",
+  "lane": "neutral",
+  "published": "2026-11-10T19:24:03.000Z"
+ },
+ {
+  "title": "Top Dem cries ‘weaponization’ as comments warning young people not to join Trump admin land her in hot water",
+  "url": "https://example.com/a/254",
+  "source": "Fox News",
+  "lane": "conservative",
+  "published": "2026-11-10T20:12:12.000Z"
+ },
+ {
+  "title": "France's Macron and wife file new lawsuit against US podcaster Owens",
+  "url": "https://example.com/a/255",
+  "source": "Reuters",
+  "lane": "neutral",
+  "published": "2026-11-10T21:35:33.000Z"
+ },
+ {
+  "title": "U.S. boycotts U.N. human rights review for second year running",
+  "url": "https://example.com/a/256",
+  "source": "NPR",
+  "lane": "neutral",
+  "published": "2026-11-10T18:53:34.000Z"
+ },
+ {
+  "title": "Why Walliams' unprecedented legal battle to stay anonymous failed",
+  "url": "https://example.com/a/257",
+  "source": "BBC",
+  "lane": "neutral",
+  "published": "2026-11-10T22:41:01.000Z"
+ },
+ {
+  "title": "Gas is about to drop below $4 for the first time since July",
+  "url": "https://example.com/a/258",
+  "source": "CNN",
+  "lane": "liberal",
+  "published": "2026-11-09T13:38:30.000Z"
+ },
+ {
+  "title": "WATCH: Multiple 49ers and Raiders' Fans Knocked Out in Wild Parking Lot Brawl",
+  "url": "https://example.com/a/259",
+  "source": "Breitbart",
+  "lane": "conservative",
+  "published": "2026-11-09T15:56:42.000Z"
+ },
+ {
+  "title": "GOP Rep. Massie files articles of impeachment against Hegseth",
+  "url": "https://example.com/a/26",
+  "source": "CNN",
+  "lane": "liberal",
+  "published": "2026-11-09T19:33:45.000Z"
+ },
+ {
+  "title": "‘I’m not the man I was’: Johnny Depp is back with his biggest role since his highly publicized legal battles",
+  "url": "https://example.com/a/260",
+  "source": "CNN",
+  "lane": "liberal",
+  "published": "2026-11-09T11:00:16.000Z"
+ },
+ {
+  "title": "Biden Says Trump Once Mused About An Alternate Reality Where They Were Friends",
+  "url": "https://example.com/a/261",
+  "source": "HuffPost",
+  "lane": "liberal",
+  "published": "2026-11-10T04:03:11.000Z"
+ },
+ {
+  "title": "Exclusive – Sen. Rick Scott Calls on GOP-Led Senate to Work Instead of Going Home: Pass Voter ID, Confirm Trump Judges",
+  "url": "https://example.com/a/262",
+  "source": "Breitbart",
+  "lane": "conservative",
+  "published": "2026-11-10T17:33:19.000Z"
+ },
+ {
+  "title": "Man arrested after woman found dead in her room aboard a cruise ship hours after departing Galveston",
+  "url": "https://example.com/a/263",
+  "source": "CNN",
+  "lane": "liberal",
+  "published": "2026-11-09T23:12:25.000Z"
+ },
+ {
+  "title": "Oil shock from Iran war led to drop in carbon pollution, scientists say",
+  "url": "https://example.com/a/264",
+  "source": "PBS News",
+  "lane": "neutral",
+  "published": "2026-11-10T19:05:11.000Z"
+ },
+ {
+  "title": "Scalise or Jordan? House Republicans to decide between continuity and confrontation",
+  "url": "https://example.com/a/265",
+  "source": "MS NOW",
+  "lane": "liberal",
+  "published": "2026-11-10T10:00:00.000Z"
+ },
+ {
+  "title": "Trump’s media company finds customers seeking special access to president’s posts",
+  "url": "https://example.com/a/266",
+  "source": "MS NOW",
+  "lane": "liberal",
+  "published": "2026-11-10T16:33:01.000Z"
+ },
+ {
+  "title": "Press Forward completes nearly $600M in journalism investments about 2 years early",
+  "url": "https://example.com/a/267",
+  "source": "Washington Times",
+  "lane": "conservative",
+  "published": "2026-11-10T15:03:49.000Z"
+ },
+ {
+  "title": "War in Iran 'ending fairly soon', says Trump – video",
+  "url": "https://example.com/a/268",
+  "source": "The Guardian",
+  "lane": "liberal",
+  "published": "2026-11-10T11:15:53.000Z"
+ },
+ {
+  "title": "Peltola widens narrow Alaska Senate lead over Sullivan as counting continues",
+  "url": "https://example.com/a/269",
+  "source": "Fox News",
+  "lane": "conservative",
+  "published": "2026-11-10T19:46:24.000Z"
+ },
+ {
+  "title": "Supreme Court allows Trump to continue border wall construction in Big Bend region of Texas",
+  "url": "https://example.com/a/27",
+  "source": "CNN",
+  "lane": "liberal",
+  "published": "2026-11-09T20:03:03.000Z"
+ },
+ {
+  "title": "Trump says military action against Iran doesn’t seem ‘very necessary’",
+  "url": "https://example.com/a/270",
+  "source": "MS NOW",
+  "lane": "liberal",
+  "published": "2026-11-10T03:56:52.000Z"
+ },
+ {
+  "title": "Sean Hannity Severely Downplays Midterm Losses, Gets Eviscerated",
+  "url": "https://example.com/a/271",
+  "source": "HuffPost",
+  "lane": "liberal",
+  "published": "2026-11-10T13:40:46.000Z"
+ },
+ {
+  "title": "Gilded statue in DC mocks Trump for ‘dodging’ Vietnam war draft over bone spurs",
+  "url": "https://example.com/a/272",
+  "source": "The Guardian",
+  "lane": "liberal",
+  "published": "2026-11-10T15:12:28.000Z"
+ },
+ {
+  "title": "Smart ring maker Oura to acquire Counsel Health for $625 million",
+  "url": "https://example.com/a/273",
+  "source": "Reuters",
+  "lane": "neutral",
+  "published": "2026-11-10T17:52:47.000Z"
+ },
+ {
+  "title": "NFL trade deadline: Kirk Cousins returns to Vikings as Raiders hand starting job to Fernando Mendoza",
+  "url": "https://example.com/a/274",
+  "source": "The Guardian",
+  "lane": "liberal",
+  "published": "2026-11-10T19:57:37.000Z"
+ },
+ {
+  "title": "Cornyn: Talarico will have 'interesting time navigating a red state as a Democrat'",
+  "url": "https://example.com/a/275",
+  "source": "The Hill",
+  "lane": "neutral",
+  "published": "2026-11-10T22:07:12.000Z"
+ },
+ {
+  "title": "Dem Rep. McGuire on Immigration Deal: 'Not Going to Compromise on ICE'",
+  "url": "https://example.com/a/276",
+  "source": "Breitbart",
+  "lane": "conservative",
+  "published": "2026-11-10T12:09:14.000Z"
+ },
+ {
+  "title": "Iran-backed terror suspects plotted attack on US troops using vans packed with fuel, DOJ says",
+  "url": "https://example.com/a/277",
+  "source": "Fox News",
+  "lane": "conservative",
+  "published": "2026-11-10T20:25:12.000Z"
+ },
+ {
+  "title": "Remembering Kristallnacht: Witness says night of terror risks being a lesson not learned",
+  "url": "https://example.com/a/278",
+  "source": "AP",
+  "lane": "neutral",
+  "published": "2026-11-09T06:28:00.000Z"
+ },
+ {
+  "title": "Americans across the economic spectrum feel a 'panic' about finances, author says",
+  "url": "https://example.com/a/279",
+  "source": "NPR",
+  "lane": "neutral",
+  "published": "2026-11-10T17:46:25.000Z"
+ },
+ {
+  "title": "Paul McCartney achieves billionaire status, becomes world’s third-richest musician",
+  "url": "https://example.com/a/28",
+  "source": "CNN",
+  "lane": "liberal",
+  "published": "2026-11-10T13:52:39.000Z"
+ },
+ {
+  "title": "Carney says he will tell Xi that outsiders should not meddle in Canada's affairs",
+  "url": "https://example.com/a/280",
+  "source": "Reuters",
+  "lane": "neutral",
+  "published": "2026-11-10T17:34:24.000Z"
+ },
+ {
+  "title": "The Weeknight – 11/9/26",
+  "url": "https://example.com/a/281",
+  "source": "MS NOW",
+  "lane": "liberal",
+  "published": "2026-11-10T06:35:53.000Z"
+ },
+ {
+  "title": "Trump closing in on new press secretary as administration officials push for pick who could break the mold",
+  "url": "https://example.com/a/282",
+  "source": "Fox News",
+  "lane": "conservative",
+  "published": "2026-11-10T19:17:27.000Z"
+ },
+ {
+  "title": "Trump administration moves to cut food stamps for 6.3 million people",
+  "url": "https://example.com/a/283",
+  "source": "Reuters",
+  "lane": "neutral",
+  "published": "2026-11-10T15:52:26.000Z"
+ },
+ {
+  "title": "Donald Trump Shares Bonkers AI Slop Of Dana White Telling White House Reporters To ‘Shut Up’",
+  "url": "https://example.com/a/284",
+  "source": "HuffPost",
+  "lane": "liberal",
+  "published": "2026-11-10T09:12:57.000Z"
+ },
+ {
+  "title": "What got more expensive for US consumers in October?",
+  "url": "https://example.com/a/285",
+  "source": "Reuters",
+  "lane": "neutral",
+  "published": "2026-11-10T18:37:35.000Z"
+ },
+ {
+  "title": "Consumer Prices Rise More Than Expected as Shelter and Food Prices Jump",
+  "url": "https://example.com/a/286",
+  "source": "Breitbart",
+  "lane": "conservative",
+  "published": "2026-11-10T13:32:14.000Z"
+ },
+ {
+  "title": "Kirk Cousins is back in Minnesota, and the Vikings' NFC odds are still too long",
+  "url": "https://example.com/a/287",
+  "source": "Fox News",
+  "lane": "conservative",
+  "published": "2026-11-10T22:20:09.000Z"
+ },
+ {
+  "title": "Trump says his deportation policy ‘might have been too tough’ for voters in the election",
+  "url": "https://example.com/a/288",
+  "source": "AP",
+  "lane": "neutral",
+  "published": "2026-11-09T14:20:00.000Z"
+ },
+ {
+  "title": "Mamdani signs law giving nonprofits first dibs to buy distressed NYC properties",
+  "url": "https://example.com/a/289",
+  "source": "New York Post",
+  "lane": "conservative",
+  "published": "2026-11-10T22:10:03.000Z"
+ },
+ {
+  "title": "The thorny politics of impeaching Pete Hegseth",
+  "url": "https://example.com/a/29",
+  "source": "CNN",
+  "lane": "liberal",
+  "published": "2026-11-09T19:08:51.000Z"
+ },
+ {
+  "title": "Seven days of chaos in the ER: How this country's healthcare system is unraveling",
+  "url": "https://example.com/a/290",
+  "source": "NPR",
+  "lane": "neutral",
+  "published": "2026-11-10T12:48:48.000Z"
+ },
+ {
+  "title": "Charlamagne tha God Calls Out Dave Chappelle for Celebrating Charlie Kirk Murder: 'Any of Us Can Be Shot'",
+  "url": "https://example.com/a/291",
+  "source": "Breitbart",
+  "lane": "conservative",
+  "published": "2026-11-10T14:21:22.000Z"
+ },
+ {
+  "title": "Opinion | Defense Secretary Pete Hegseth will likely be gone soon. How he goes is up to him.",
+  "url": "https://example.com/a/3",
+  "source": "MS NOW",
+  "lane": "liberal",
+  "published": "2026-11-09T23:02:30.000Z"
+ },
+ {
+  "title": "France blames Iran for ‘unprecedented’ supermarket fridge cyberattack",
+  "url": "https://example.com/a/30",
+  "source": "CNN",
+  "lane": "liberal",
+  "published": "2026-11-09T17:34:07.000Z"
+ },
+ {
+  "title": "Jensen Huang is living proof that AI’s rockstar CEOs are also a hidden risk",
+  "url": "https://example.com/a/31",
+  "source": "CNN",
+  "lane": "liberal",
+  "published": "2026-11-09T18:29:01.000Z"
+ },
+ {
+  "title": "Nvidia CEO Jensen Huang admits affair as company launches investigation into foreign spy claims",
+  "url": "https://example.com/a/32",
+  "source": "CNN",
+  "lane": "liberal",
+  "published": "2026-11-09T06:28:46.000Z"
+ },
+ {
+  "title": "France blames Iran for ‘unprecedented’ supermarket fridge cyberattack",
+  "url": "https://example.com/a/33",
+  "source": "CNN",
+  "lane": "liberal",
+  "published": "2026-11-09T16:22:04.000Z"
+ },
+ {
+  "title": "Massie: In some ways, Hegseth has been effective: \"that's what we're impeaching him for\"",
+  "url": "https://example.com/a/34",
+  "source": "CNN",
+  "lane": "liberal",
+  "published": "2026-11-10T02:39:28.000Z"
+ },
+ {
+  "title": "House Republicans Pick Jim Jordan As Next Leader",
+  "url": "https://example.com/a/35",
+  "source": "HuffPost",
+  "lane": "liberal",
+  "published": "2026-11-10T19:32:55.000Z"
+ },
+ {
+  "title": "JD Vance Seems To Be Back On Team Hegseth 1 Week After Ripping Iran War",
+  "url": "https://example.com/a/36",
+  "source": "HuffPost",
+  "lane": "liberal",
+  "published": "2026-11-10T19:24:44.000Z"
+ },
+ {
+  "title": "Defiant Pete Hegseth Dismisses Impeachment Push As A 'Stunt' In First Pentagon Briefing In Months",
+  "url": "https://example.com/a/37",
+  "source": "HuffPost",
+  "lane": "liberal",
+  "published": "2026-11-10T15:59:20.000Z"
+ },
+ {
+  "title": "Thomas Massie Drops The Mic On Pete Hegseth In Brutal Pentagon Presser Prediction",
+  "url": "https://example.com/a/38",
+  "source": "HuffPost",
+  "lane": "liberal",
+  "published": "2026-11-10T15:04:21.000Z"
+ },
+ {
+  "title": "Rachel Maddow Names Next Top Trump Official She Wants Impeached After Pete Hegseth",
+  "url": "https://example.com/a/39",
+  "source": "HuffPost",
+  "lane": "liberal",
+  "published": "2026-11-10T10:27:31.000Z"
+ },
+ {
+  "title": "‘You gotta be kidding me’: Hegseth used these four things to decide on senior officer promotions",
+  "url": "https://example.com/a/4",
+  "source": "MS NOW",
+  "lane": "liberal",
+  "published": "2026-11-09T15:00:00.000Z"
+ },
+ {
+  "title": "California Voters Reject First-Of-Its-Kind Billionaire Tax",
+  "url": "https://example.com/a/40",
+  "source": "HuffPost",
+  "lane": "liberal",
+  "published": "2026-11-10T02:37:28.000Z"
+ },
+ {
+  "title": "Trump Knowingly Let Nvidia CEO Take Part In China Talks Despite Liaison With Spy",
+  "url": "https://example.com/a/41",
+  "source": "HuffPost",
+  "lane": "liberal",
+  "published": "2026-11-09T22:44:34.000Z"
+ },
+ {
+  "title": "Thomas Massie Triggers Impeachment Vote Against Pete Hegseth",
+  "url": "https://example.com/a/42",
+  "source": "HuffPost",
+  "lane": "liberal",
+  "published": "2026-11-09T21:24:53.000Z"
+ },
+ {
+  "title": "Big Bend Border Wall Construction Can Proceed, Supreme Court Says",
+  "url": "https://example.com/a/43",
+  "source": "HuffPost",
+  "lane": "liberal",
+  "published": "2026-11-09T20:43:08.000Z"
+ },
+ {
+  "title": "California’s ‘Billionaire Tax’ Is Still Trailing After A Week Of Vote Counting",
+  "url": "https://example.com/a/44",
+  "source": "HuffPost",
+  "lane": "liberal",
+  "published": "2026-11-09T19:12:22.000Z"
+ },
+ {
+  "title": "CNN’s Harry Enten Spots Exactly Why Pete Hegseth ‘Might Not Be Sticking Around’ In Trump Land",
+  "url": "https://example.com/a/45",
+  "source": "HuffPost",
+  "lane": "liberal",
+  "published": "2026-11-09T14:14:24.000Z"
+ },
+ {
+  "title": "Hegseth Gives Pentagon Briefing As Impeachment Vote Looms, California Rejects Billionaire Tax: Live Updates",
+  "url": "https://example.com/a/46",
+  "source": "HuffPost",
+  "lane": "liberal",
+  "published": "2026-11-09T09:57:47.000Z"
+ },
+ {
+  "title": "Trump ally Jim Jordan to lead House Republicans next year, with John Thune to return as Senate minority leader - live",
+  "url": "https://example.com/a/47",
+  "source": "The Guardian",
+  "lane": "liberal",
+  "published": "2026-11-10T22:49:17.000Z"
+ },
+ {
+  "title": "Republicans elect Jim Jordan as House minority leader after midterm defeats",
+  "url": "https://example.com/a/48",
+  "source": "The Guardian",
+  "lane": "liberal",
+  "published": "2026-11-10T22:42:43.000Z"
+ },
+ {
+  "title": "Hegseth lays it on thick for Trump to shave off fallout from Iran war",
+  "url": "https://example.com/a/49",
+  "source": "The Guardian",
+  "lane": "liberal",
+  "published": "2026-11-10T19:31:24.000Z"
+ },
+ {
+  "title": "Consumer prices continue to climb, despite Trump’s claims about having ‘solved’ inflation",
+  "url": "https://example.com/a/5",
+  "source": "MS NOW",
+  "lane": "liberal",
+  "published": "2026-11-10T13:48:48.000Z"
+ },
+ {
+  "title": "Hegseth calls Republican’s bid to impeach him a ‘stunt’ by critics of Trump",
+  "url": "https://example.com/a/50",
+  "source": "The Guardian",
+  "lane": "liberal",
+  "published": "2026-11-10T13:32:07.000Z"
+ },
+ {
+  "title": "The Guardian view on Jensen Huang’s affair: why did Trump ignore the warnings? | Editorial",
+  "url": "https://example.com/a/51",
+  "source": "The Guardian",
+  "lane": "liberal",
+  "published": "2026-11-09T18:51:10.000Z"
+ },
+ {
+  "title": "US inflation rose 0.4% in October as price increases cooled and gas costs dipped",
+  "url": "https://example.com/a/52",
+  "source": "The Guardian",
+  "lane": "liberal",
+  "published": "2026-11-10T15:38:48.000Z"
+ },
+ {
+  "title": "'It's a farce': Pete Hegseth dismisses impeachment effort against him – video",
+  "url": "https://example.com/a/53",
+  "source": "The Guardian",
+  "lane": "liberal",
+  "published": "2026-11-10T14:44:36.000Z"
+ },
+ {
+  "title": "Trump backs embattled Hegseth and Jensen Huang and says FBI looking into spy allegations – video",
+  "url": "https://example.com/a/54",
+  "source": "The Guardian",
+  "lane": "liberal",
+  "published": "2026-11-10T01:40:32.000Z"
+ },
+ {
+  "title": "Senior US Army soldier arrested in UK on suspicion of spying for Russia",
+  "url": "https://example.com/a/55",
+  "source": "Fox News",
+  "lane": "conservative",
+  "published": "2026-11-10T21:51:09.000Z"
+ },
+ {
+  "title": "Hegseth labels impeachment push a policy dispute, but do lawmakers' allegations rise to high crimes?",
+  "url": "https://example.com/a/56",
+  "source": "Fox News",
+  "lane": "conservative",
+  "published": "2026-11-10T21:44:25.000Z"
+ },
+ {
+  "title": "Senate GOP rebellion fizzles as Thune keeps power despite historic midterm massacre",
+  "url": "https://example.com/a/57",
+  "source": "Fox News",
+  "lane": "conservative",
+  "published": "2026-11-10T20:42:54.000Z"
+ },
+ {
+  "title": "Jim Jordan picked as next House GOP leader: Sound off!",
+  "url": "https://example.com/a/58",
+  "source": "Fox News",
+  "lane": "conservative",
+  "published": "2026-11-10T20:16:40.000Z"
+ },
+ {
+  "title": "Jim Jordan becomes new House GOP leader after closed-door vote, defeating Steve Scalise",
+  "url": "https://example.com/a/59",
+  "source": "Fox News",
+  "lane": "conservative",
+  "published": "2026-11-10T19:20:38.000Z"
+ },
+ {
+  "title": "U.S. Army soldier arrested in England, suspected of espionage linked to Russia",
+  "url": "https://example.com/a/6",
+  "source": "MS NOW",
+  "lane": "liberal",
+  "published": "2026-11-10T20:42:36.000Z"
+ },
+ {
+  "title": "Democrats rally behind GOP lawmaker's Hegseth impeachment push, signal more to come in January",
+  "url": "https://example.com/a/60",
+  "source": "Fox News",
+  "lane": "conservative",
+  "published": "2026-11-10T18:35:26.000Z"
+ },
+ {
+  "title": "Nvidia spy case exposes how foreign agents target America’s corporate elite: 'He is compromised'",
+  "url": "https://example.com/a/61",
+  "source": "Fox News",
+  "lane": "conservative",
+  "published": "2026-11-10T16:24:51.000Z"
+ },
+ {
+  "title": "Ohio's Jim Jordan Will Lead House Republicans in Next Congress",
+  "url": "https://example.com/a/62",
+  "source": "Breitbart",
+  "lane": "conservative",
+  "published": "2026-11-10T21:29:41.000Z"
+ },
+ {
+  "title": "Details Emerge About Nvidia Boss Jensen Huang's Relationship with Alleged Chinese Spy",
+  "url": "https://example.com/a/63",
+  "source": "Breitbart",
+  "lane": "conservative",
+  "published": "2026-11-10T17:53:57.000Z"
+ },
+ {
+  "title": "Franklin Graham on Pete Hegseth Attacks: 'I Don’t know Why Republicans Eat Each Other'",
+  "url": "https://example.com/a/64",
+  "source": "Breitbart",
+  "lane": "conservative",
+  "published": "2026-11-10T18:59:07.000Z"
+ },
+ {
+  "title": "Pete Hegseth: Massie's Impeachment Effort Is a 'Political Spectacle,' 'Farce'",
+  "url": "https://example.com/a/65",
+  "source": "Breitbart",
+  "lane": "conservative",
+  "published": "2026-11-10T16:05:54.000Z"
+ },
+ {
+  "title": "Trump Gives Hegseth 'A PLUS, PLUS, PLUS' Rating for Rebuttal of Potential Impeachment",
+  "url": "https://example.com/a/66",
+  "source": "Breitbart",
+  "lane": "conservative",
+  "published": "2026-11-10T14:35:26.000Z"
+ },
+ {
+  "title": "Anthropic Sets $70-$78 IPO Price Range, Hoping for $1.4 Trillion Valuation",
+  "url": "https://example.com/a/67",
+  "source": "Breitbart",
+  "lane": "conservative",
+  "published": "2026-11-10T15:19:38.000Z"
+ },
+ {
+  "title": "'The China Problem': Stock Researchers Identified Nvidia CEO Jensen Huang's Troubling Relationship 6 Months Ago",
+  "url": "https://example.com/a/68",
+  "source": "Breitbart",
+  "lane": "conservative",
+  "published": "2026-11-10T17:06:38.000Z"
+ },
+ {
+  "title": "California Voters Reject Punitive One-Time Tax on Billionaire Wealth",
+  "url": "https://example.com/a/69",
+  "source": "Breitbart",
+  "lane": "conservative",
+  "published": "2026-11-10T10:25:43.000Z"
+ },
+ {
+  "title": "Rep. Thomas Massie files resolution on Hegseth impeachment, teeing up a vote",
+  "url": "https://example.com/a/7",
+  "source": "MS NOW",
+  "lane": "liberal",
+  "published": "2026-11-10T03:20:56.000Z"
+ },
+ {
+  "title": "France Says Iran Behind Supermarket Sabotage Fridge Hack",
+  "url": "https://example.com/a/70",
+  "source": "Breitbart",
+  "lane": "conservative",
+  "published": "2026-11-10T12:05:57.000Z"
+ },
+ {
+  "title": "Supreme Court Lifts Order Blocking Trump's Big Bend Border Wall",
+  "url": "https://example.com/a/71",
+  "source": "Breitbart",
+  "lane": "conservative",
+  "published": "2026-11-10T01:44:29.000Z"
+ },
+ {
+  "title": "Massie: 'High Probability' Hegseth Won't Be in Office in December",
+  "url": "https://example.com/a/72",
+  "source": "Breitbart",
+  "lane": "conservative",
+  "published": "2026-11-10T04:07:52.000Z"
+ },
+ {
+  "title": "Billionaire party girl Lucy Guo drops bombshell threat after TV star ex-girlfriend aired dirty laundry",
+  "url": "https://example.com/a/73",
+  "source": "New York Post",
+  "lane": "conservative",
+  "published": "2026-11-10T21:29:32.000Z"
+ },
+ {
+  "title": "California just voted to give two billionaires $4 billion in taxpayer money so they can do obscure research",
+  "url": "https://example.com/a/74",
+  "source": "New York Post",
+  "lane": "conservative",
+  "published": "2026-11-10T20:58:47.000Z"
+ },
+ {
+  "title": "Senate Republicans re-elect John Thune as leader after midterm shellacking",
+  "url": "https://example.com/a/75",
+  "source": "New York Post",
+  "lane": "conservative",
+  "published": "2026-11-10T20:57:23.000Z"
+ },
+ {
+  "title": "Rep. Jim Jordan elected next House Republican leader after midterms blowout",
+  "url": "https://example.com/a/76",
+  "source": "New York Post",
+  "lane": "conservative",
+  "published": "2026-11-10T19:26:21.000Z"
+ },
+ {
+  "title": "Hegseth rips impeachment effort in first press conference since May: ‘This is not patriotism. This is sabotage’",
+  "url": "https://example.com/a/77",
+  "source": "New York Post",
+  "lane": "conservative",
+  "published": "2026-11-10T13:19:55.000Z"
+ },
+ {
+  "title": "FBI is ‘looking into’ Nvidia boss Jensen Huang’s affair with suspected Chinese spy, Trump says",
+  "url": "https://example.com/a/78",
+  "source": "New York Post",
+  "lane": "conservative",
+  "published": "2026-11-10T11:59:50.000Z"
+ },
+ {
+  "title": "California voters officially reject controversial billionaire tax in setback for progressive agenda",
+  "url": "https://example.com/a/79",
+  "source": "New York Post",
+  "lane": "conservative",
+  "published": "2026-11-10T03:14:45.000Z"
+ },
+ {
+  "title": "Supreme Court allows border wall construction over Justice Jackson’s dissent",
+  "url": "https://example.com/a/8",
+  "source": "MS NOW",
+  "lane": "liberal",
+  "published": "2026-11-09T21:08:42.000Z"
+ },
+ {
+  "title": "Senate Republicans reelect Thune as top leader, rejecting push to delay internal election",
+  "url": "https://example.com/a/80",
+  "source": "Washington Times",
+  "lane": "conservative",
+  "published": "2026-11-10T21:04:46.000Z"
+ },
+ {
+  "title": "Rep. Jim Jordan of Ohio elected new leader of bruised House GOP",
+  "url": "https://example.com/a/81",
+  "source": "Washington Times",
+  "lane": "conservative",
+  "published": "2026-11-10T19:42:22.000Z"
+ },
+ {
+  "title": "Republicans leave closed-door meeting without a decision on whether to reelect John Thune as leader",
+  "url": "https://example.com/a/82",
+  "source": "Washington Times",
+  "lane": "conservative",
+  "published": "2026-11-10T16:25:12.000Z"
+ },
+ {
+  "title": "Moolenaar presses Nvidia to probe CEO's ties to alleged Chinese spy",
+  "url": "https://example.com/a/83",
+  "source": "Washington Times",
+  "lane": "conservative",
+  "published": "2026-11-10T15:33:00.000Z"
+ },
+ {
+  "title": "Trump gives Pete Hegseth A+ in his defense against impeachment threats",
+  "url": "https://example.com/a/84",
+  "source": "Washington Times",
+  "lane": "conservative",
+  "published": "2026-11-10T14:55:08.000Z"
+ },
+ {
+  "title": "Inflation rose 0.4% in October, government says, as Fed weighs rate increase",
+  "url": "https://example.com/a/85",
+  "source": "Washington Times",
+  "lane": "conservative",
+  "published": "2026-11-10T13:39:24.000Z"
+ },
+ {
+  "title": "House nears test vote on impeaching Hegseth as he decries ‘political spectacle’",
+  "url": "https://example.com/a/86",
+  "source": "AP",
+  "lane": "neutral",
+  "published": "2026-11-10T22:45:00.000Z"
+ },
+ {
+  "title": "US soldier assigned to NATO unit arrested in Britain on suspicion of espionage linked to Russia",
+  "url": "https://example.com/a/87",
+  "source": "AP",
+  "lane": "neutral",
+  "published": "2026-11-10T21:38:00.000Z"
+ },
+ {
+  "title": "US stocks fall after a discouraging update on inflation",
+  "url": "https://example.com/a/88",
+  "source": "AP",
+  "lane": "neutral",
+  "published": "2026-11-10T18:35:00.000Z"
+ },
+ {
+  "title": "Anthropic seeks valuation of about $1.3 trillion when it becomes a publicly traded company",
+  "url": "https://example.com/a/89",
+  "source": "AP",
+  "lane": "neutral",
+  "published": "2026-11-10T16:24:00.000Z"
+ },
+ {
+  "title": "Nvidia CEO’s alleged spy scandal could ensnare Trump, too",
+  "url": "https://example.com/a/9",
+  "source": "MS NOW",
+  "lane": "liberal",
+  "published": "2026-11-09T19:18:50.000Z"
+ },
+ {
+  "title": "Supreme Court clears the way for border wall construction in Texas’s Big Bend to resume",
+  "url": "https://example.com/a/90",
+  "source": "AP",
+  "lane": "neutral",
+  "published": "2026-11-09T22:33:00.000Z"
+ },
+ {
+  "title": "Rep. Jim Jordan of Ohio elected to lead House Republicans in the minority",
+  "url": "https://example.com/a/91",
+  "source": "AP",
+  "lane": "neutral",
+  "published": "2026-11-10T20:26:00.000Z"
+ },
+ {
+  "title": "FBI is looking at Nvidia CEO Jensen Huang's affair with an alleged Chinese agent, Trump says",
+  "url": "https://example.com/a/92",
+  "source": "AP",
+  "lane": "neutral",
+  "published": "2026-11-10T04:11:00.000Z"
+ },
+ {
+  "title": "California voters reject measure to tax the wealth of billionaires",
+  "url": "https://example.com/a/93",
+  "source": "AP",
+  "lane": "neutral",
+  "published": "2026-11-10T04:04:00.000Z"
+ },
+ {
+  "title": "France blames Iran for a cyberattack that heated supermarket refrigerators",
+  "url": "https://example.com/a/94",
+  "source": "AP",
+  "lane": "neutral",
+  "published": "2026-11-10T01:17:00.000Z"
+ },
+ {
+  "title": "Internal probe into CEO Jensen Huang and 'foreign intelligence' weighs on high-flying Nvidia shares",
+  "url": "https://example.com/a/95",
+  "source": "AP",
+  "lane": "neutral",
+  "published": "2026-11-09T23:38:00.000Z"
+ },
+ {
+  "title": "How major US stock indexes fared Monday 11/9/2026",
+  "url": "https://example.com/a/96",
+  "source": "AP",
+  "lane": "neutral",
+  "published": "2026-11-09T21:22:00.000Z"
+ },
+ {
+  "title": "Nvidia investigates whether CEO Jensen Huang was targeted by Chinese spy with whom he had an affair",
+  "url": "https://example.com/a/97",
+  "source": "AP",
+  "lane": "neutral",
+  "published": "2026-11-09T01:52:00.000Z"
+ },
+ {
+  "title": "Rep. Thomas Massie of Kentucky launches bid to impeach Defense Secretary Pete Hegseth",
+  "url": "https://example.com/a/98",
+  "source": "AP",
+  "lane": "neutral",
+  "published": "2026-11-09T22:33:00.000Z"
+ },
+ {
+  "title": "US stocks rally and recover most of last week’s losses as oil prices swing lower",
+  "url": "https://example.com/a/99",
+  "source": "AP",
+  "lane": "neutral",
+  "published": "2026-11-09T21:51:00.000Z"
+ }
+]
