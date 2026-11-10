@@ -143,7 +143,19 @@ function itemImage(item) {
   );
 }
 
+// Google News links are redirect pages whose only preview image is the
+// Google News logo, never the story's own picture.
+function isGoogleNewsLink(url) {
+  try {
+    return new URL(url).hostname === "news.google.com";
+  } catch {
+    return false;
+  }
+}
+
 async function fetchArticleImage(article, fetchImpl) {
+  if (isGoogleNewsLink(article.url)) return null;
+
   try {
     const response = await fetchImpl(article.url, {
       headers: { "user-agent": "newsful/2 (+https://newsful.vercel.app)" },

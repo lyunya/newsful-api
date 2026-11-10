@@ -157,21 +157,19 @@ test("getNews returns all three lanes, newest first", async () => {
   assert.ok(news.conservative.every((a) => a.lane === "conservative"));
 });
 
-test("getNews enriches search results that only have Google News article links", async () => {
+test("getNews never uses the Google News logo as a story image", async () => {
+  let articlePageFetches = 0;
   const searchFetch = (url) => {
     if (url.includes("news.google.com/rss/articles/")) {
+      articlePageFetches += 1;
       return Promise.resolve({
         ok: true,
         url,
         headers: new Map([["content-type", "text/html"]]),
         text: () =>
-          Promise.resolve(`
-            <html>
-              <head>
-                <meta property="og:image" content="https://lh3.googleusercontent.com/story-thumb=s0-w300">
-              </head>
-            </html>
-          `),
+          Promise.resolve(
+            '<meta property="og:image" content="https://lh3.googleusercontent.com/google-news-logo=s0-w300">',
+          ),
       });
     }
 
@@ -185,10 +183,8 @@ test("getNews enriches search results that only have Google News article links",
   };
 
   const news = await getNews("climate", { fetchImpl: searchFetch });
-  assert.equal(
-    news.neutral[0].image,
-    "https://lh3.googleusercontent.com/story-thumb=s0-w300",
-  );
+  assert.ok(Object.values(news).flat().every((article) => !article.image));
+  assert.equal(articlePageFetches, 0);
 });
 
 test("getNews takes turns between outlets so one feed can't fill a lane", async () => {
