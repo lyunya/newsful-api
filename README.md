@@ -63,6 +63,31 @@ Responds `200` with:
 
 Results are cached in memory (10 min for top stories, 5 min for searches) and stale results are served if the upstream feeds are unreachable; a cold failure responds `502`.
 
+### `GET /api/stories` — no auth required
+
+Stories that several outlets are covering, with each lane's headlines grouped together. Headlines from a wider pool of feeds (see `src/stories/story-sources.js`) are matched by weighted word overlap — no model or API key (see `src/stories/story-matcher.js`). Only stories covered by at least two lanes and two outlets are returned, best-covered first.
+
+Responds `200` with:
+
+```json
+{
+  "stories": [
+    {
+      "id": "…",
+      "title": "…",
+      "lanes": { "liberal": [ { "title": "…", "url": "…", "source": "…", "published": "…", "lane": "liberal", "image": null } ], "conservative": [], "neutral": [] },
+      "missingLanes": ["conservative"],
+      "outletCount": 5,
+      "latest": "…"
+    }
+  ],
+  "outlets": 14,
+  "headlines": 568
+}
+```
+
+Cached like `/api/news`; a cold failure responds `502`.
+
 ### `POST /api/users` — register
 
 Body: `{ "email": string, "password": string }`

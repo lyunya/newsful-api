@@ -9,6 +9,7 @@ import usersRouter from './users/users-router.js';
 import authRouter from './auth/auth-router.js';
 import articlesRouter from './saved-articles/articles-router.js';
 import newsRouter from './news/news-router.js';
+import storiesRouter from './stories/stories-router.js';
 
 // App factory so tests can inject their own database connection.
 export function makeApp(db) {
@@ -31,6 +32,7 @@ export function makeApp(db) {
   app.use('/api/auth', authRouter);
   app.use('/api/saved-articles', articlesRouter);
   app.use('/api/news', newsRouter);
+  app.use('/api/stories', storiesRouter);
 
   app.use((req, res) => {
     res.status(404).json({ error: 'Not found' });
@@ -106,10 +108,13 @@ export default async function handler(req, res) {
   const db = serverlessApp?.get('db') ?? createDb();
   serverlessApp ??= makeApp(db);
 
-  // News and the health check never touch the database, so they don't wait
-  // for (or fail with) the schema check.
+  // News, stories and the health check never touch the database, so they
+  // don't wait for (or fail with) the schema check.
   const path = (req.url ?? '').split('?')[0];
-  const needsDb = path !== '/' && !path.startsWith('/api/news');
+  const needsDb =
+    path !== '/' &&
+    !path.startsWith('/api/news') &&
+    !path.startsWith('/api/stories');
 
   if (needsDb) {
     ready ??= (async () => {
