@@ -23,6 +23,37 @@ export const STORY_SOURCES = [
     source: "The Guardian",
     url: "https://www.theguardian.com/us-news/rss",
   },
+  {
+    lane: "liberal",
+    source: "NBC News",
+    url: "https://feeds.nbcnews.com/nbcnews/public/politics",
+  },
+  {
+    lane: "liberal",
+    source: "CBS News",
+    url: "https://www.cbsnews.com/latest/rss/politics",
+  },
+  {
+    lane: "liberal",
+    source: "ABC News",
+    url: "https://abcnews.go.com/abcnews/politicsheadlines",
+  },
+  {
+    lane: "liberal",
+    source: "New York Times",
+    url: "https://rss.nytimes.com/services/xml/rss/nyt/Politics.xml",
+  },
+  {
+    lane: "liberal",
+    source: "New York Times",
+    url: "https://rss.nytimes.com/services/xml/rss/nyt/US.xml",
+  },
+  {
+    lane: "liberal",
+    source: "Washington Post",
+    url: googleNews("washingtonpost.com"),
+  },
+  { lane: "liberal", source: "Axios", url: "https://api.axios.com/feed/" },
 
   // Conservative
   {
@@ -55,6 +86,46 @@ export const STORY_SOURCES = [
     source: "Washington Times",
     url: "https://www.washingtontimes.com/rss/headlines/news/politics/",
   },
+  {
+    lane: "conservative",
+    source: "Fox News",
+    url: "https://moxie.foxnews.com/google-publisher/us.xml",
+  },
+  {
+    lane: "conservative",
+    source: "Washington Examiner",
+    url: googleNews("washingtonexaminer.com"),
+  },
+  {
+    lane: "conservative",
+    source: "New York Sun",
+    url: googleNews("nysun.com"),
+  },
+  {
+    lane: "conservative",
+    source: "Just the News",
+    url: "https://justthenews.com/rss.xml",
+  },
+  {
+    lane: "conservative",
+    source: "Daily Signal",
+    url: "https://www.dailysignal.com/feed/",
+  },
+  {
+    lane: "conservative",
+    source: "Daily Caller",
+    url: "https://dailycaller.com/feed/",
+  },
+  {
+    lane: "conservative",
+    source: "Daily Wire",
+    url: "https://www.dailywire.com/feeds/rss.xml",
+  },
+  {
+    lane: "conservative",
+    source: "National Review",
+    url: "https://www.nationalreview.com/feed/",
+  },
 
   // Neutral
   { lane: "neutral", source: "AP", url: googleNews("apnews.com") },
@@ -76,5 +147,38 @@ export const STORY_SOURCES = [
     source: "PBS News",
     url: "https://www.pbs.org/newshour/feeds/rss/headlines",
   },
-  { lane: "neutral", source: "The Hill", url: "https://thehill.com/news/feed/" },
+  {
+    lane: "neutral",
+    source: "PBS News",
+    url: "https://www.pbs.org/newshour/feeds/rss/politics",
+  },
+  { lane: "neutral", source: "The Hill", url: "https://thehill.com/feed/" },
+  {
+    lane: "neutral",
+    source: "UPI",
+    url: "https://rss.upi.com/news/top_news.rss",
+  },
+  { lane: "neutral", source: "Semafor", url: googleNews("semafor.com") },
+  { lane: "neutral", source: "Bloomberg", url: googleNews("bloomberg.com") },
+  {
+    lane: "neutral",
+    source: "Wall Street Journal",
+    url: "https://feeds.content.dowjones.io/public/rss/RSSUSnews",
+  },
+  {
+    lane: "neutral",
+    source: "Wall Street Journal",
+    url: "https://feeds.content.dowjones.io/public/rss/RSSWorldNews",
+  },
+  {
+    lane: "neutral",
+    source: "Al Jazeera",
+    url: "https://www.aljazeera.com/xml/rss/all.xml",
+  },
+  { lane: "neutral", source: "Newsweek", url: "https://www.newsweek.com/rss" },
+  {
+    lane: "neutral",
+    source: "NewsNation",
+    url: "https://www.newsnationnow.com/feed/",
+  },
 ];
