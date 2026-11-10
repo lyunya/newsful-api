@@ -4,7 +4,7 @@
 import { XMLParser } from "fast-xml-parser";
 
 export const LANES = [
-  { id: "liberal", label: "Liberal", domains: ["msnbc.com", "huffpost.com"] },
+  { id: "liberal", label: "Liberal", domains: ["ms.now", "huffpost.com"] },
   {
     id: "conservative",
     label: "Conservative",
@@ -220,16 +220,27 @@ async function fetchLane(lane, query, fetchImpl, enrichImages) {
     }),
   );
 
+  // Newest first within each outlet, then take turns between outlets so a
+  // prolific feed can't crowd the others out of the lane.
+  const queues = perDomain.map((result) =>
+    result.status === "fulfilled"
+      ? result.value.toSorted((a, b) =>
+          (b.published ?? "").localeCompare(a.published ?? ""),
+        )
+      : [],
+  );
   const seen = new Set();
-  const articles = perDomain
-    .flatMap((result) => (result.status === "fulfilled" ? result.value : []))
-    .filter((article) => {
-      if (seen.has(article.url)) return false;
+  const articles = [];
+  const longest = Math.max(0, ...queues.map((queue) => queue.length));
+  for (let i = 0; i < longest && articles.length < ARTICLES_PER_LANE; i += 1) {
+    for (const queue of queues) {
+      const article = queue[i];
+      if (!article || seen.has(article.url)) continue;
+      if (articles.length >= ARTICLES_PER_LANE) break;
       seen.add(article.url);
-      return true;
-    })
-    .sort((a, b) => (b.published ?? "").localeCompare(a.published ?? ""))
-    .slice(0, ARTICLES_PER_LANE);
+      articles.push(article);
+    }
+  }
 
   return enrichImages ? enrichArticleImages(articles, fetchImpl) : articles;
 }

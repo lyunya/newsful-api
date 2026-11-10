@@ -56,7 +56,7 @@ function feedXmlWithoutImages(domain, sourceName, count = 2) {
 }
 
 const SOURCE_NAMES = {
-  "msnbc.com": "MSNBC",
+  "ms.now": "MS NOW",
   "huffpost.com": "HuffPost",
   "foxnews.com": "Fox News",
   "breitbart.com": "Breitbart",
@@ -148,7 +148,7 @@ test("getNews returns all three lanes, newest first", async () => {
   assert.equal(news.liberal.length, 4); // 2 domains x 2 stories
   assert.equal(
     news.liberal[0].image,
-    "https://images.example.com/msnbc.com-1.jpg",
+    "https://images.example.com/ms.now-1.jpg",
   );
   assert.ok(
     news.liberal[0].published >= news.liberal.at(-1).published,
@@ -189,6 +189,29 @@ test("getNews enriches search results that only have Google News article links",
     news.neutral[0].image,
     "https://lh3.googleusercontent.com/story-thumb=s0-w300",
   );
+});
+
+test("getNews takes turns between outlets so one feed can't fill a lane", async () => {
+  const lopsidedFetch = (url) => {
+    if (!url.includes("huffpost.com")) return fakeFetch(url);
+    return Promise.resolve({
+      ok: true,
+      text: () => Promise.resolve(feedXml("huffpost.com", "HuffPost", 9)),
+    });
+  };
+  const news = await getNews("", { fetchImpl: lopsidedFetch });
+  assert.deepEqual(
+    news.liberal.slice(0, 4).map((article) => article.source),
+    ["MS NOW", "HuffPost", "MS NOW", "HuffPost"],
+  );
+  assert.equal(news.liberal.length, 11);
+});
+
+test("GET /api/news is cacheable by the CDN", async () => {
+  app.set("newsFetchImpl", fakeFetch);
+  const res = await supertest(app).get("/api/news").expect(200);
+  assert.match(res.headers["cache-control"], /s-maxage=\d+/);
+  app.set("newsFetchImpl", null);
 });
 
 test("getNews caches results", async () => {

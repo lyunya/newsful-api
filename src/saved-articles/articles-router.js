@@ -4,6 +4,19 @@ import { requireAuth } from '../middleware/jwt-auth.js';
 
 const articlesRouter = express.Router();
 
+const MAX_TITLE_LENGTH = 500;
+const MAX_URL_LENGTH = 2048;
+const MAX_SOURCE_LENGTH = 200;
+
+function isHttpUrl(value) {
+  if (typeof value !== 'string' || value.length > MAX_URL_LENGTH) return false;
+  try {
+    return ['http:', 'https:'].includes(new URL(value).protocol);
+  } catch {
+    return false;
+  }
+}
+
 // Every route is scoped to the authenticated user; nobody can read or
 // touch anyone else's bookmarks.
 articlesRouter.use(requireAuth);
@@ -26,6 +39,20 @@ articlesRouter
           .status(400)
           .json({ error: `Missing '${field}' in request body` });
       }
+    }
+
+    if (typeof title !== 'string' || title.length > MAX_TITLE_LENGTH) {
+      return res.status(400).json({ error: "Invalid 'title'" });
+    }
+    // Links are rendered as hrefs, so only web URLs are accepted.
+    if (!isHttpUrl(url)) {
+      return res.status(400).json({ error: "Invalid 'url'" });
+    }
+    if (image && !isHttpUrl(image)) {
+      return res.status(400).json({ error: "Invalid 'image'" });
+    }
+    if (source && (typeof source !== 'string' || source.length > MAX_SOURCE_LENGTH)) {
+      return res.status(400).json({ error: "Invalid 'source'" });
     }
 
     const article = await ArticlesService.insertArticle(req.app.get('db'), {

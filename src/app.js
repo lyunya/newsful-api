@@ -92,14 +92,21 @@ export default async function handler(req, res) {
   const db = serverlessApp?.get('db') ?? createDb();
   serverlessApp ??= makeApp(db);
 
-  ready ??= (async () => {
-    await runMigrations();
-    await ensureSchema(db);
-  })().catch((error) => {
-    ready = undefined; // let the next request retry
-    throw error;
-  });
-  await ready;
+  // News and the health check never touch the database, so they don't wait
+  // for (or fail with) the schema check.
+  const path = (req.url ?? '').split('?')[0];
+  const needsDb = path !== '/' && !path.startsWith('/api/news');
+
+  if (needsDb) {
+    ready ??= (async () => {
+      await runMigrations();
+      await ensureSchema(db);
+    })().catch((error) => {
+      ready = undefined; // let the next request retry
+      throw error;
+    });
+    await ready;
+  }
 
   return serverlessApp(req, res);
 }
