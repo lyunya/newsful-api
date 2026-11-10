@@ -11,6 +11,9 @@ authRouter.post('/login', authRateLimit, async (req, res) => {
     if (!value) {
       return res.status(400).json({ error: `Missing '${field}' in request body` });
     }
+    if (typeof value !== 'string') {
+      return res.status(400).json({ error: `'${field}' must be a string` });
+    }
   }
 
   const db = req.app.get('db');

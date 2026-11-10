@@ -14,6 +14,9 @@ usersRouter.post('/', authRateLimit, async (req, res) => {
     if (!value) {
       return res.status(400).json({ error: `Missing '${field}' in request body` });
     }
+    if (typeof value !== 'string') {
+      return res.status(400).json({ error: `'${field}' must be a string` });
+    }
   }
 
   const validationError =
@@ -27,10 +30,19 @@ usersRouter.post('/', authRateLimit, async (req, res) => {
     return res.status(409).json({ error: 'Email already taken' });
   }
 
-  const user = await UsersService.insertUser(db, {
-    email,
-    password: await UsersService.hashPassword(password),
-  });
+  let user;
+  try {
+    user = await UsersService.insertUser(db, {
+      email,
+      password: await UsersService.hashPassword(password),
+    });
+  } catch (error) {
+    // Two sign-ups for the same email raced past the check above.
+    if (error.code === '23505') {
+      return res.status(409).json({ error: 'Email already taken' });
+    }
+    throw error;
+  }
 
   res.status(201).json({
     authToken: AuthService.createJwt(user),

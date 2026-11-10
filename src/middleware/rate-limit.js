@@ -10,3 +10,13 @@ export const authRateLimit = rateLimit({
   skip: () => config.NODE_ENV === 'test',
   message: { error: 'Too many attempts, please try again later' },
 });
+
+// Each uncached search fans out to several upstream feeds and article pages.
+export const newsRateLimit = rateLimit({
+  windowMs: 60 * 1000,
+  limit: 60,
+  standardHeaders: 'draft-8',
+  legacyHeaders: false,
+  skip: () => config.NODE_ENV === 'test',
+  message: { error: 'Too many requests, please slow down' },
+});

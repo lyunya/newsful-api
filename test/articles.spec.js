@@ -120,3 +120,13 @@ test('rejects an expired token', async () => {
     .set('Authorization', `Bearer ${expired}`)
     .expect(401);
 });
+
+test('POST /api/saved-articles rejects links that are not web URLs', async () => {
+  const [user] = await seedUsers(db);
+  const res = await supertest(app)
+    .post('/api/saved-articles')
+    .set('Authorization', authHeader(user))
+    .send({ title: 'Sneaky', url: 'javascript:alert(1)' })
+    .expect(400);
+  assert.equal(res.body.error, "Invalid 'url'");
+});

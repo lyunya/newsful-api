@@ -58,7 +58,7 @@ Aggregated news for the app's three lanes, sourced from free Google News RSS fee
 Responds `200` with:
 
 ```json
-{ "liberal": [ { "title": "…", "url": "…", "source": "MSNBC", "published": "…", "lane": "liberal", "image": null } ], "conservative": [], "neutral": [] }
+{ "liberal": [ { "title": "…", "url": "…", "source": "MS NOW", "published": "…", "lane": "liberal", "image": null } ], "conservative": [], "neutral": [] }
 ```
 
 Results are cached in memory (10 min for top stories, 5 min for searches) and stale results are served if the upstream feeds are unreachable; a cold failure responds `502`.
