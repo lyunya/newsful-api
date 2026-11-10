@@ -27,6 +27,7 @@ const LINK_THRESHOLD = 0.24; // average similarity needed to merge two groups
 const MIN_SHARED_WORDS = 2;
 const SUMMARY_WEIGHT = 0.35;
 const MAX_PER_LANE = 3;
+const NEAR_TYPICAL = 0.8;
 // Headlines that open with a format label make poor story titles.
 const LABEL_PREFIX = /^(watch|live|exclusive|report|video|opinion|analysis)\b/i;
 
@@ -129,7 +130,7 @@ function cluster(articles, vectors) {
   const candidates = new Set();
   for (const indexes of byWord.values()) {
     // Too common to be a useful signal (only meaningful in a large pool).
-    if (indexes.length > Math.max(n / 4, 25)) continue;
+    if (indexes.length > Math.max(n / 4, 50)) continue;
     for (let a = 0; a < indexes.length; a += 1) {
       for (let b = a + 1; b < indexes.length; b += 1) {
         candidates.add(indexes[a] * n + indexes[b]);
@@ -226,13 +227,21 @@ export function matchStories(articles, { limit = 12 } = {}) {
     if (coveredLanes.length < 2 || outlets.size < 2) continue;
 
     // Prefer a neutral outlet's wording for the story's own headline.
-    const candidates = [
-      ...lanes.neutral,
-      ...ranked.map((i) => articles[i]),
-    ];
-    const lead =
-      candidates.find((article) => !LABEL_PREFIX.test(article.title)) ??
-      candidates[0];
+    // The story's own headline: the most typical one, preferring a neutral
+    // outlet's wording when it is nearly as typical. Headlines that open
+    // with a format label or pose a question make poor titles.
+    const topScore = centrality.get(ranked[0]);
+    const typical = ranked.filter(
+      (i) => centrality.get(i) >= topScore * NEAR_TYPICAL,
+    );
+    const plain = (i) =>
+      !LABEL_PREFIX.test(articles[i].title) &&
+      !articles[i].title.trim().endsWith("?");
+    const leadIndex =
+      typical.find((i) => articles[i].lane === "neutral" && plain(i)) ??
+      ranked.find(plain) ??
+      ranked[0];
+    const lead = articles[leadIndex];
     const published = group
       .map((i) => articles[i].published)
       .filter(Boolean)

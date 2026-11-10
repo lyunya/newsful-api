@@ -71,6 +71,17 @@ test("matchStories groups the same story across lanes", () => {
   assert.equal(stories[0].title, "House Republicans elect Jim Jordan as their next leader");
 });
 
+test("matchStories titles a story with a typical headline, not a question or labelled one", () => {
+  const [story] = matchStories([
+    article("neutral", "Newsweek", "Who is Jim Jordan, the next House Republican leader?"),
+    article("neutral", "PBS News", "WATCH: House Republicans elect Jim Jordan as their next leader"),
+    article("liberal", "HuffPost", "House Republicans Pick Jim Jordan As Next Leader"),
+    article("conservative", "Breitbart", "Jim Jordan elected to lead House Republicans in next Congress"),
+    article("neutral", "NPR", "House Republicans elect Jim Jordan as next leader"),
+  ]);
+  assert.equal(story.title, "House Republicans elect Jim Jordan as next leader");
+});
+
 test("matchStories reports a lane with no coverage", () => {
   const [story] = matchStories([
     article("liberal", "CNN", "Judge jails Thomas Markle after he cut off his ankle monitor"),
